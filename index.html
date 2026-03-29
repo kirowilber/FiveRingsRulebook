@@ -8,8 +8,135 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- SIDEBAR -->
+<nav class="sidebar" id="sidebar" aria-label="Chapter navigation">
+  <div class="sidebar-header">
+    <div class="sidebar-title">Rulebook</div>
+    <div class="sidebar-name">Five Rings</div>
+  </div>
+  <div class="sidebar-nav">
+
+    <div class="nav-chapter" id="nav-cover">
+      <a href="#cover" class="nav-chapter-link">
+        <span class="nav-chapter-num">◈</span>
+        Cover
+      </a>
+    </div>
+    <div class="nav-chapter" id="nav-toc">
+      <a href="#toc" class="nav-chapter-link">
+        <span class="nav-chapter-num">—</span>
+        Contents
+      </a>
+    </div>
+
+    <div class="nav-divider"></div>
+
+    <div class="nav-chapter" id="nav-ch1">
+      <a class="nav-chapter-link" data-chapter="nav-ch1" href="#chapter-1">
+        <span class="nav-chapter-num">I</span>
+        Core Gameplay
+        <span class="nav-chapter-arrow">▶</span>
+      </a>
+      <div class="nav-sections">
+        <a href="#chapter-1" class="nav-section-link">The Gameplay Loop</a>
+        <a href="#character-creation" class="nav-section-link">Character Creation</a>
+        <a href="#rings-traits" class="nav-section-link">Rings &amp; Traits</a>
+        <a href="#skill-checks" class="nav-section-link">Skill Checks &amp; Raises</a>
+        <a href="#skill-checks" class="nav-section-link">Skills &amp; Specializations</a>
+      </div>
+    </div>
+
+    <div class="nav-chapter" id="nav-ch2">
+      <a class="nav-chapter-link" data-chapter="nav-ch2" href="#chapter-2">
+        <span class="nav-chapter-num">II</span>
+        Action &amp; Combat
+        <span class="nav-chapter-arrow">▶</span>
+      </a>
+      <div class="nav-sections">
+        <a href="#initiative" class="nav-section-link">Initiative &amp; Rounds</a>
+        <a href="#initiative" class="nav-section-link">Defense</a>
+        <a href="#initiative" class="nav-section-link">Attacking</a>
+        <a href="#damage" class="nav-section-link">Damage &amp; Wounds</a>
+        <a href="#firearms" class="nav-section-link">Firearms &amp; Cover</a>
+        <a href="#martial-arts" class="nav-section-link">Martial Arts &amp; Wrestling</a>
+        <a href="#martial-arts" class="nav-section-link">Spirit Recovery</a>
+      </div>
+    </div>
+
+    <div class="nav-chapter" id="nav-ch3">
+      <a class="nav-chapter-link" data-chapter="nav-ch3" href="#chapter-3">
+        <span class="nav-chapter-num">III</span>
+        World Interaction
+        <span class="nav-chapter-arrow">▶</span>
+      </a>
+      <div class="nav-sections">
+        <a href="#status-effects" class="nav-section-link">Status Effects</a>
+        <a href="#wealth" class="nav-section-link">Wealth</a>
+        <a href="#languages" class="nav-section-link">Language Fluency</a>
+        <a href="#languages" class="nav-section-link">Social Interaction</a>
+        <a href="#languages" class="nav-section-link">Exploration &amp; Hazards</a>
+      </div>
+    </div>
+
+    <div class="nav-chapter" id="nav-ch4">
+      <a class="nav-chapter-link" data-chapter="nav-ch4" href="#chapter-4">
+        <span class="nav-chapter-num">IV</span>
+        Advancement
+        <span class="nav-chapter-arrow">▶</span>
+      </a>
+      <div class="nav-sections">
+        <a href="#chapter-4" class="nav-section-link">Earning &amp; Spending XP</a>
+        <a href="#advantages" class="nav-section-link">Advantages</a>
+        <a href="#skills-list" class="nav-section-link">Skills</a>
+      </div>
+    </div>
+
+    <div class="nav-chapter" id="nav-ch5">
+      <a class="nav-chapter-link" data-chapter="nav-ch5" href="#chapter-5">
+        <span class="nav-chapter-num">V</span>
+        GM Toolkit
+        <span class="nav-chapter-arrow">▶</span>
+      </a>
+      <div class="nav-sections">
+        <a href="#chapter-5" class="nav-section-link">Setting Target Numbers</a>
+        <a href="#chapter-5" class="nav-section-link">Healing &amp; Recovery</a>
+        <a href="#chapter-5" class="nav-section-link">Encounter Design</a>
+        <a href="#chapter-5" class="nav-section-link">Spirit as Narrative Tool</a>
+        <a href="#chapter-5" class="nav-section-link">Story &amp; Session Guidance</a>
+      </div>
+    </div>
+
+    <div class="nav-divider"></div>
+
+    <div class="nav-chapter" id="nav-app">
+      <a class="nav-chapter-link" data-chapter="nav-app" href="#equipment">
+        <span class="nav-chapter-num">A</span>
+        Weapons &amp; Armor
+        <span class="nav-chapter-arrow">▶</span>
+      </a>
+      <div class="nav-sections">
+        <a href="#equipment" class="nav-section-link">Melee Weapons</a>
+        <a href="#equipment" class="nav-section-link">Ranged Weapons</a>
+        <a href="#equipment" class="nav-section-link">Special Properties</a>
+        <a href="#equipment" class="nav-section-link">Armor</a>
+        <a href="#equipment" class="nav-section-link">Equipment &amp; Addons</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- TOGGLE BUTTON -->
+<button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle navigation">
+  <span class="toggle-icon">◀</span>
+  <span class="toggle-label">Hide</span>
+</button>
+
+<!-- MAIN CONTENT WRAPPER -->
+<div class="main-content" id="main-content">
+
 <!-- COVER -->
-<div class="cover">
+<div class="cover" id="cover">
   <svg class="cover-grid" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs>
       <pattern id="grid-h" x="0" y="0" width="1" height="40" patternUnits="userSpaceOnUse">
@@ -43,7 +170,7 @@
 <!-- TABLE OF CONTENTS -->
 <div class="page-wrap">
 
-  <div class="toc-section">
+  <div class="toc-section" id="toc">
     <div class="toc-title">Contents</div>
     <div class="toc-grid">
       <a href="#chapter-1" class="toc-item"><span class="toc-item-num">I</span><span class="toc-item-name">Core Gameplay</span></a>
@@ -1176,6 +1303,6 @@
   </div>
 
 </div><!-- /.page-wrap -->
-
+<script src="script.js"></script>
 </body>
 </html>
