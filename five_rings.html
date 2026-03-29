@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Five Rings - Core Rulebook</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- COVER -->
+<div class="cover">
+  <svg class="cover-grid" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <pattern id="grid-h" x="0" y="0" width="1" height="40" patternUnits="userSpaceOnUse">
+        <line x1="0" y1="39.5" x2="10000" y2="39.5" stroke="rgba(79,195,212,0.07)" stroke-width="1"/>
+      </pattern>
+      <pattern id="grid-v" x="0" y="0" width="60" height="1" patternUnits="userSpaceOnUse">
+        <line x1="59.5" y1="0" x2="59.5" y2="10000" stroke="rgba(79,195,212,0.05)" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid-h)"/>
+    <rect width="100%" height="100%" fill="url(#grid-v)"/>
+  </svg>
+  <div class="cover-rings">
+    <span class="active">Fire</span>
+    <span>◆︎</span>
+    <span class="active">Water</span>
+    <span>◆︎</span>
+    <span class="active">Air</span>
+    <span>◆︎</span>
+    <span class="active">Earth</span>
+    <span>◆︎</span>
+    <span class="active">Spirit</span>
+  </div>
+  <h1>Five Rings</h1>
+  <div class="cover-subtitle">Core Rulebook</div>
+  <div class="cover-ornament">// ◈ //</div>
+  <p class="cover-tagline"><em>"The body moves by instinct. The mind moves by will. But Spirit is what determines whether you endure."</em></p>
+  <div class="cover-edition">First Edition &nbsp;·&nbsp; A Complete Roleplaying System</div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="page-wrap">
+
+  <div class="toc-section">
+    <div class="toc-title">Contents</div>
+    <div class="toc-grid">
+      <a href="#chapter-1" class="toc-item"><span class="toc-item-num">I</span><span class="toc-item-name">Core Gameplay</span></a>
+      <a href="#character-creation" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Character Creation</span></a>
+      <a href="#rings-traits" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Rings &amp; Traits</span></a>
+      <a href="#skill-checks" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Skill Checks &amp; Raises</span></a>
+      <a href="#chapter-2" class="toc-item"><span class="toc-item-num">II</span><span class="toc-item-name">Action &amp; Combat</span></a>
+      <a href="#initiative" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Initiative &amp; Actions</span></a>
+      <a href="#damage" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Damage &amp; Wounds</span></a>
+      <a href="#firearms" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Firearms &amp; Cover</span></a>
+      <a href="#chapter-3" class="toc-item"><span class="toc-item-num">III</span><span class="toc-item-name">World Interaction</span></a>
+      <a href="#wealth" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Wealth &amp; Gear</span></a>
+      <a href="#status-effects" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Status Effects</span></a>
+      <a href="#languages" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Languages</span></a>
+      <a href="#chapter-4" class="toc-item"><span class="toc-item-num">IV</span><span class="toc-item-name">Advancement</span></a>
+      <a href="#advantages" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Advantages</span></a>
+      <a href="#skills-list" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Skills &amp; Specializations</span></a>
+      <a href="#chapter-5" class="toc-item"><span class="toc-item-num">V</span><span class="toc-item-name">GM Toolkit</span></a>
+      <a href="#equipment" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Weapons &amp; Armor</span></a>
+      <a href="#martial-arts" class="toc-item"><span class="toc-item-num">-</span><span class="toc-item-name">Martial Arts &amp; Wrestling</span></a>
+    </div>
+  </div>
+
+  <!-- CHAPTER I - CORE GAMEPLAY -->
+  <div id="chapter-1" class="chapter-break">
+    <div class="chapter-number">Chapter One</div>
+    <h1 class="chapter-title">Core Gameplay</h1>
+    <div class="chapter-rule"></div>
+    <p class="chapter-intro">This system is built around competent but human characters facing dangerous, often overwhelming
+      situations. Whether investigating strange events, surviving a hostile environment, or fighting, everything runs
+      through one resolution mechanic.</p>
+    </div>
+
+  <!-- THE GAMEPLAY LOOP -->
+  <div class="section">
+    <h2 class="section-head">The Gameplay Loop</h2>
+    <p>Every session follows the same structure. The GM describes what characters perceive. Players declare what their
+      characters attempt. The GM determines whether the outcome is certain or requires a roll.</p>
+
+    <div class="combat-flow">
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-step-num">1</div>
+          <div class="flow-step-label">GM Describes Situation</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">2</div>
+          <div class="flow-step-label">Player Declares Action</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">3</div>
+          <div class="flow-step-label">GM Sets TN</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">4</div>
+          <div class="flow-step-label">Declare Raises</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">5</div>
+          <div class="flow-step-label">Roll &amp; Keep</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">6</div>
+          <div class="flow-step-label">Resolve Outcome</div>
+        </div>
+      </div>
+    </div>
+
+    <p>When success is uncertain, the GM calls for a <strong>Trait + Skill</strong> check and sets a <strong>Target Number
+        (TN)</strong>. Roll a pool of D10s and keep a number equal to the relevant Trait. If the total of kept dice meets or
+      exceeds the TN, the action succeeds. Failure produces complications, danger, or a partial outcome at the GM's
+      discretion.</p>
+
+    <div class="callout tip">
+      <div class="callout-label">Game Master Note</div>
+      <p>Not every action needs a roll. If the outcome is certain, or if failure would produce only tedium rather than drama,
+        let it happen. Rolls are for moments of genuine uncertainty where the result matters.</p>
+    </div>
+  </div>
+
+  <!-- CHARACTER CREATION -->
+  <div id="character-creation" class="section">
+    <h2 class="section-head">Character Creation</h2>
+    <p>Characters begin as capable individuals with room to grow. Creation follows four steps.</p>
+
+    <h3 class="subsection-head">Step 1 - Starting Traits</h3>
+    <p>All Traits and the Spirit Ring start at 1. Choose <strong>one</strong> Trait to increase by 1. Traits and Rings have
+      a maximum of 5, but during character creation the maximum is <strong>3</strong>, with two exceptions: your starting
+      Language (English) and any Trait or skill granted through pre-character development, which may reach 4.</p>
+
+    <h3 class="subsection-head">Step 2 - Experience Points</h3>
+    <p>You have <strong>120 XP</strong> to spend during creation. All characters receive <em>Language: English</em> at Rank
+      3 at no cost. Choose 3 skills with a Level 1 cost of no more than 3 XP; these start at Rank 1 for free. One of these
+      free slots may raise English to Rank 4 instead.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Category</th><th>Cost During Creation</th><th>Cost After Creation</th></tr></thead>
+        <tbody>
+          <tr><td>Trait or Spirit Ring</td><td>5 XP per Rank</td><td>5 x current Rank</td></tr>
+          <tr><td>Skill</td><td>Cumulative XP of the desired Rank</td><td>Cost of the next Rank only</td></tr>
+          <tr><td>New Skill</td><td>As listed for Rank 1</td><td>2x the cost of Rank 1</td></tr>
+          <tr><td>Advantage</td><td>Cost of the desired level only</td><td>2x Advantage cost (GM approval)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="example">
+      <div class="example-label">Example - Buying a Skill</div>
+      <p>John wants his character to be skilled with pistols. He spends <strong>1 XP</strong> for Rank 1, <strong>2
+          XP</strong> for Rank 2, and <strong>4 XP</strong> for Rank 3, totaling 7 XP. To advance later to Rank 4, he pays
+        only the cost listed for Rank 4 (8 XP). Rank 5 costs 16 XP.</p>
+    </div>
+
+    <h3 class="subsection-head">Step 3 - Specializations</h3>
+    <p>Choose a number of free Skill Specializations equal to your <strong>Fire Ring</strong>. Each skill may hold exactly
+      one Specialization. Additional Specializations require the <em>Specialized</em> Advantage.</p>
+
+    <h3 class="subsection-head">Step 4 - Starting Gear</h3>
+    <p>Characters begin with <strong>10 Expendable Wealth</strong> to purchase starting gear, and may also spend from Personal Wealth at GM discretion.</p>
+  </div>
+
+  <!-- RINGS & TRAITS -->
+  <div id="rings-traits" class="section">
+    <h2 class="section-head">Rings &amp; Traits</h2>
+    <p>Each Ring pairs one Physical Trait with one Mental Trait. A Ring's value is:</p>
+    <p><span class="formula">(Physical Trait + Mental Trait) ÷ 2, rounded down</span></p>
+
+    <div class="rings-display">
+      <div class="ring-card">
+        <div class="ring-card-head">Fire</div>
+        <div class="ring-card-body">
+          Free Specializations
+          <div class="ring-card-trait"><span>Physical</span><span>Agility</span></div>
+          <div class="ring-card-trait"><span>Mental</span><span>Intelligence</span></div>
+        </div>
+      </div>
+      <div class="ring-card">
+        <div class="ring-card-head">Water</div>
+        <div class="ring-card-body">
+          Melee TN (x5)
+          <div class="ring-card-trait"><span>Physical</span><span>Strength</span></div>
+          <div class="ring-card-trait"><span>Mental</span><span>Perception</span></div>
+        </div>
+      </div>
+      <div class="ring-card">
+        <div class="ring-card-head">Air</div>
+        <div class="ring-card-body">
+          Ranged TN (x5)
+          <div class="ring-card-trait"><span>Physical</span><span>Reflexes</span></div>
+          <div class="ring-card-trait"><span>Mental</span><span>Awareness</span></div>
+        </div>
+      </div>
+      <div class="ring-card">
+        <div class="ring-card-head">Earth</div>
+        <div class="ring-card-body">
+          Dramatic Wound limit
+          <div class="ring-card-trait"><span>Physical</span><span>Stamina</span></div>
+          <div class="ring-card-trait"><span>Mental</span><span>Willpower</span></div>
+        </div>
+      </div>
+      <div class="ring-card">
+        <div class="ring-card-head">Spirit</div>
+        <div class="ring-card-body">
+          Raises &amp; bonus dice
+          <div class="ring-card-trait"><span>Maximum</span><span>Max Spirit</span></div>
+          <div class="ring-card-trait"><span>Spendable</span><span>Current Spirit</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Ring</th><th>What It Represents</th><th>Mechanical Use</th></tr></thead>
+        <tbody>
+          <tr><td>Fire</td><td>Ambition, talent, and refinement</td><td>Number of free Specializations at character creation</td></tr>
+          <tr><td>Water</td><td>Adaptability and fluid motion</td><td>Base passive Melee TN (see Passive Defense for variant options)</td></tr>
+          <tr><td>Air</td><td>Precision, timing, awareness</td><td>Base passive Ranged TN (see Passive Defense for variant options)</td></tr>
+          <tr><td>Earth</td><td>Durability and resilience</td><td>Sets Crippled and Incapacitated thresholds</td></tr>
+          <tr><td>Spirit</td><td>Focus, determination, and drive</td><td>Raises after rolling; spend for bonus 1K1 dice</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">The Spirit Ring</div>
+      <p>Spirit has two values: <strong>Maximum Spirit</strong> (the physical trait of the ring) and <strong>Current
+          Spirit</strong> (the mental trait). Current Spirit is spent during play and recovers through rest, Meditation, or GM
+        reward. Maximum Spirit is the upper ceiling.</p>
+    </div>
+  </div>
+
+  <!-- SKILL CHECKS -->
+  <div id="skill-checks" class="section">
+    <h2 class="section-head">Skill Checks</h2>
+
+    <div class="quick-ref">
+      <div class="quick-ref-head">The Roll at a Glance</div>
+      <ul>
+        <li><strong>Roll</strong> Trait + Skill dice (D10s)</li>
+        <li><strong>Keep</strong> a number equal to your Trait</li>
+        <li>A 10 explodes - reroll and add</li>
+        <li>Total kept dice vs. TN</li>
+        <li>Meet or beat = success</li>
+      </ul>
+    </div>
+
+    <p>When success is uncertain, the GM calls for a <strong>Trait + Skill check</strong>. Roll a number of D10s equal to
+      your Trait value plus your Skill rank. Keep a number of dice equal to your Trait and total them. A die showing 10
+      <strong>explodes</strong>: reroll it and add the new result to that die's total.</p>
+    
+    <p>If the final total meets or exceeds the Target Number, the action succeeds.</p>
+    
+    <h4 class="sub-sub-head">Unskilled Checks</h4>
+    <p>Attempting a Skill check without any ranks makes you <em>Unskilled</em>. Roll and keep only a number of D10s equal to
+      your Trait. The TN increases by 10, and Raises of any kind are unavailable.</p>
+    
+    <h4 class="sub-sub-head">Trait Checks</h4>
+    <p>When no skill applies, the GM may call for a raw Trait check. Roll and keep a number of D10s equal to your Trait
+      value.</p>
+    
+    <h2 class="section-head">Raises</h2>
+    <p>Raises push an action further: ricocheting a shot around a corner, landing a called shot, adding force to a hit. Each
+      Raise increases the TN by <strong>5</strong>.</p>
+    
+    <p>Raises can only be declared one of two ways:</p>
+    <ul>
+      <li><strong>Before the roll:</strong> Declare any number of Raises before rolling. Each adds 5 to the TN.</li>
+      <li><strong>After the roll:</strong> Spend Current Spirit to make Raises after seeing the result, up to your Current
+        Spirit rating. Each still adds 5 to the TN. If the total no longer meets the new TN, the roll fails.</li>
+    </ul>
+
+    <div class="callout rule">
+      <div class="callout-label">Critical Rule</div>
+      <p>Only <em>one</em> method per roll. Raises declared before rolling cannot be combined with post-roll Raises, and vice versa.</p>
+    </div>
+
+    <h2 class="section-head" style="margin-top:2rem;">Skills &amp; Specializations</h2>
+    <p>Skills represent trained capabilities. Higher ranks add more dice to the pool and, for certain skills, unlock
+      Techniques. Each Skill holds exactly <strong>one Specialization</strong>, which typically grants +5 or +10, reduces a
+      TN, or unlocks a new action.</p>
+    <p>The Fire Ring determines how many free Specializations a character receives at creation. Two characters with
+      identical skills can play very differently depending on their Specializations - these choices define a character's
+      niche within the party.</p>
+  </div>
+
+  <!-- CHAPTER II - ACTION & COMBAT -->
+  <div id="chapter-2" class="chapter-break">
+    <div class="chapter-number">Chapter Two</div>
+    <h1 class="chapter-title">Action &amp; Combat</h1>
+    <div class="chapter-rule"></div>
+    <p class="chapter-intro">Combat is fast, lethal, and tactical. Action economy matters. Positioning matters. Spirit
+      management matters. A single well-placed hit can change a fight. This chapter covers time, actions, damage, and
+      survival.</p>
+  </div>
+
+  <div id="initiative" class="section">
+    <h2 class="section-head">Initiative &amp; Rounds</h2>
+    <p>Combat is divided into <strong>Rounds</strong>, each consisting of <strong>10 Action Phases</strong>. Each Phase
+      represents roughly 6 seconds. A Round begins at Phase 1 and advances phase by phase as actions resolve.</p>
+    
+    <h3 class="subsection-head">Actions per Round</h3>
+    <p>The number of available actions each Round - called <strong>Action Dice</strong> - is calculated from the sum of all
+      five Ring values. Two variants exist:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Variant</th><th>Formula</th><th>Feel</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Standard</strong></td>
+            <td>(Sum of all Rings) ÷ 5, round down</td>
+            <td>Fewer actions; slower, grittier combat pace.</td>
+          </tr>
+          <tr>
+            <td><strong>+1 Variant</strong> <em>(recommended)</em></td>
+            <td>1 + (Sum of all Rings) ÷ 5, round down</td>
+            <td>One guaranteed extra action; combats move faster.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-label">Playtester Note</div>
+      <p>The +1 variant was added after playtesting showed that low-Ring characters sometimes had only 1–2 Action Dice per
+        Round, making combat sluggish and leaving players with little to do. The extra die meaningfully speeds play without
+        unbalancing the action economy. Use the standard formula for a harsher, more tactical game.</p>
+    </div>
+    
+    <h3 class="subsection-head">Rolling Initiative</h3>
+    <p>At the start of each Round, roll a number of D10s equal to your Action Dice. The number showing on each die is the
+      Phase on which you may take that action. Lower numbers act earlier.</p>
+    
+    <div class="example">
+      <div class="example-label">Example</div>
+      <p>You have 3 Action Dice and roll a 2, a 6, and a 9. You may act on Phases 2, 6, and 9 this Round.</p>
+    </div>
+    
+    <h3 class="subsection-head">Ties in Initiative</h3>
+    <p>When two characters act in the same Phase, compare their total remaining Action Dice including the current Phase.
+      Highest total goes first. If still tied, compare Air Ring, then Fire Ring, then Spirit Ring in succession. If the tie
+      persists, the GM may rule simultaneous resolution.</p>
+    
+    <h3 class="subsection-head">Special Actions</h3>
+    
+    <h4 class="sub-sub-head">Held Actions</h4>
+    <p>Hold up to a number of Action Dice equal to your Current Spirit, spending them on a later Phase instead of when they
+      originally rolled. Held dice retain their original rolled value for tie-breaking and cannot carry over into the next
+      Round.</p>
+    
+    <h4 class="sub-sub-head">Interrupt Actions</h4>
+    <p>Spend 2 Action Dice from later Phases to perform an action on an earlier Phase. That action always resolves last in
+      the Phase. If multiple characters use Interrupt actions in the same Phase, they resolve in the order declared.</p>
+    <p><strong>Exception:</strong> An Interrupt used for an Active Defense resolves simultaneously with the triggering
+      attack.</p>
+    
+    <h4 class="sub-sub-head">Full Defense</h4>
+    <p>Before initiative is rolled at the start of a Round, declare Full Defense. Initiative rolls normally, but for the
+      entire Round Action Dice may only be used for Active Defense, movement, or support actions such as healing, assisting,
+      or repositioning. Attacks and offensive actions are unavailable. Characters with the <em>Lightning Reflexes</em>
+      Advantage gain +5 to Active Defense rolls while in Full Defense.</p>
+    </div>
+
+  <!-- DEFENSIVE OPTIONS -->
+  <div class="section">
+    <h2 class="section-head">Defense</h2>
+
+    <h3 class="subsection-head">Passive Defense</h3>
+    <p>Passive TN is how hard a character is to hit without an active response. Two variants exist - choose one and apply it consistently.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Variant</th><th>Melee TN</th><th>Ranged TN</th><th>Feel</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Standard</strong></td><td>Water Ring x 5</td><td>Air Ring x 5</td><td>Characters are easier to hit; combat is grittier and faster.</td></tr>
+          <tr><td><strong>+5 Variant</strong> <em>(recommended)</em></td><td>5 + (Water Ring x 5)</td><td>5 + (Air Ring x 5)</td><td>Characters are harder to hit; more survivable combat.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-label">Playtester Note</div>
+      <p>The +5 variant came from actual play. The standard formula produced passive TNs low enough that even average
+        attackers rarely missed, making characters feel fragile. A flat +5 to both values creates more meaningful tension
+        without changing the underlying system. Recommended for most groups, particularly new ones.</p>
+    </div>
+
+    <p>Add the <strong>Defense skill rank</strong> to whichever base TN is in use. Bonuses from cover, status effects, and other modifiers apply on top.</p>
+
+    <h3 class="subsection-head">Active Defense</h3>
+    <p>When attacked, spend an available Action Die to attempt an Active Defense. Roll <strong>Reflexes + applicable
+        Skill</strong> vs. the TN of the attacker's roll. Meeting or beating the TN negates the attack entirely.</p>
+
+    <div class="callout tip">
+      <div class="callout-label">Tip</div>
+      <p>The Defense skill adds its rank directly to both passive Melee and Ranged TN, making it one of the most efficient
+        investments for survivability. The <em>Dodgy</em> specialization doubles this bonus.</p>
+    </div>
+  </div>
+
+  <!-- ATTACKING -->
+  <div class="section">
+    <h2 class="section-head">Attacking</h2>
+    <p>When rolling to hit with a weapon or unarmed, roll <strong>Agility + applicable Skill</strong>. The GM may substitute
+      a different Trait in specific cases, such as Strength for a grappling attack, but Agility is standard. The default hit
+      location is the <strong>Chest</strong>.</p>
+    
+    <h3 class="subsection-head">Called Shots</h3>
+    <p>Spend Raises to target a specific body location. The mechanical effects of hitting specific locations - disarming,
+      reducing movement, affecting a particular ability - are adjudicated by the GM.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Raises Spent</th><th>Target Location</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>Chest (default)</td></tr>
+          <tr><td>1 Raise</td><td>Arm or Leg</td></tr>
+          <tr><td>2 Raises</td><td>Hand, Foot, or Head</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-head">Off-Hand Penalty</h3>
+    <p>Attacking with the non-dominant hand imposes a <strong>-2K2 penalty</strong> to the roll. The <em>Ambidexterity</em> Advantage negates 1K1 per level purchased.</p>
+  </div>
+
+  <!-- DAMAGE & WOUNDS -->
+  <div id="damage" class="section">
+    <h2 class="section-head">Damage &amp; Wounds</h2>
+    <p>Damage is expressed as two numbers separated by a K - for example, <span class="formula">3K2</span>. The first number
+      is how many D10s to roll; the second is how many to keep. Total the kept dice for the damage result.</p>
+    
+    <h3 class="subsection-head">Melee Damage</h3>
+    <p>Add the Strength Trait to the first number of the weapon's damage rating. Unarmed damage is <span
+        class="formula">(Str)K1</span>: a number of dice equal to Strength, keeping one.</p>
+    
+    <h3 class="subsection-head">Ranged Damage</h3>
+    <p>Most ranged weapons have fixed damage that increases only through Raises or special abilities. Bows with a
+      <strong>Power</strong> rating are the exception - they allow adding some or all of Strength to the damage dice rolled.
+    </p>
+    
+    <h3 class="subsection-head">Armor</h3>
+    <p>Armor reduces incoming Flesh Wounds. Determine whether the attack is Melee or Ranged, check whether the hit location
+      is protected, and reduce the Flesh Wounds taken by the armor's listed value. Different values apply to Melee and
+      Ranged attacks. If the location is unprotected, no reduction applies.</p>
+    
+    <hr class="section-rule">
+    
+    <h3 class="subsection-head">Flesh Wounds</h3>
+    <p>Flesh Wounds are superficial injuries with no immediate lasting effect. Whenever any Flesh Wounds are taken, make a
+      <strong>Wound Check</strong>. If the check fails and a Dramatic Wound is gained, all current Flesh Wounds are erased.
+    </p>
+    
+    <h3 class="subsection-head">The Wound Check</h3>
+    <p>Make a <strong>Stamina Trait check</strong>. The TN equals the current Flesh Wound total. Meeting or beating the TN
+      leaves the Flesh Wounds in place but causes no further harm. Failing inflicts <strong>1 Dramatic Wound</strong>, plus
+      1 more for every 10 below the TN. Unarmed attacks use a margin of 20 instead of 10. All Flesh Wounds are erased on a
+      failed Wound Check.</p>
+    
+    <h3 class="subsection-head">Dramatic Wounds</h3>
+    <p>Dramatic Wounds represent serious injury. Track them against the Earth Ring - the thresholds below determine
+      condition.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Dramatic Wounds Taken</th><th>Status</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>Less than Earth Ring</td><td>Healthy</td><td>No penalties</td></tr>
+          <tr><td>Equal to Earth Ring</td><td>Crippled</td><td>Dice no longer explode; lose 1 unkept die per DW above threshold (not on Wound Checks)</td></tr>
+          <tr><td>Equal to Earth Ring x 2</td><td>Incapacitated</td><td>Cannot act; vulnerable to death blows; requires Spirit or recovery to continue</td></tr>
+          <tr><td>More than Earth Ring x 2</td><td>-</td><td>Do not record excess Dramatic Wounds</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="sub-sub-head">Recovering from Incapacitation</h4>
+    <p>To act while Incapacitated, spend 1 Spirit Point at the start of a Combat Round to roll 1 Action Die. For that Round
+      only, the character is not considered Incapacitated or Crippled. Medical care that reduces Dramatic Wounds below the
+      double-Earth threshold restores normal function.</p>
+    
+    <h3 class="subsection-head">First Aid</h3>
+    <p>Roll <strong>Intelligence + Medicine</strong> with no TN. The result equals the number of Flesh Wounds removed from
+      the target. Costs 1 Action Die in combat. Each character may use First Aid only once per combat per target, unless
+      they have the <em>Paramedic</em> specialization.</p>
+    
+    <h3 class="subsection-head">Surgery</h3>
+    <p>Roll <strong>Intelligence + Medicine</strong> vs. a TN of 10 x the target's current Dramatic Wounds. Success removes
+      1 Dramatic Wound, plus 1 more for every 10 above the TN. Failure inflicts 1 additional Dramatic Wound - and kills the
+      target if already Incapacitated. Surgery requires 4 Action Dice. Each character may only perform Surgery once per
+      combat per target unless they have the <em>Surgeon</em> specialization.</p>
+  </div>
+
+  <!-- FIREARMS & COVER -->
+  <div id="firearms" class="section">
+    <h2 class="section-head">Firearms &amp; Firing Modes</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Firing Mode</th><th>Effect &amp; Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Single-Shot</td>
+            <td>Spend an Action Die to gain an Aim bonus (up to 3 times). Each Aim counts as one Free Raise. Any other roll before firing loses all accumulated Aim bonuses.</td>
+          </tr>
+          <tr>
+            <td>Semi-Auto</td>
+            <td>Fires 3 shots (or however many rounds remain, up to 3) per Action Die. Roll to hit separately for each bullet. The first shot has no penalty; the second has −5; the third has −10.</td>
+          </tr>
+          <tr>
+            <td>Full-Auto</td>
+            <td>Expends all ammunition (must have at least half the weapon's capacity remaining). Target a small area; make one to-hit roll at −15. Anything in the area whose TN is beaten takes 1 bullet, plus 1 per 5 above their TN (maximum bullets equal to ammo expended). Roll damage individually per bullet.</td>
+          </tr>
+          <tr>
+            <td>Suppressive Fire</td>
+            <td>Available to any weapon capable of Full-Auto. Target an individual or small area. Affected targets suffer −10 to Ranged Attacks while suppressed. Consumes 10 ammunition per Phase - this can be maintained on Phases without Action Dice as long as ammunition remains.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-head">Range Bands - Ranged Weapons</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Range Band</th><th>Distance</th><th>Modifier</th></tr></thead>
+        <tbody>
+          <tr><td>Point Blank</td><td>Within 5 feet</td><td>+1K0 to hit and damage</td></tr>
+          <tr><td>Short</td><td>Within base range</td><td>No modifier</td></tr>
+          <tr><td>Medium</td><td>Up to range x 2</td><td>−1K0 to hit</td></tr>
+          <tr><td>Long</td><td>Up to range x 4</td><td>−2K0 to hit</td></tr>
+          <tr><td>Extreme</td><td>Beyond range x 4</td><td>−3K0 to hit</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-head">Range Bands - Thrown Weapons</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Range Band</th><th>Distance</th><th>Modifier</th></tr></thead>
+        <tbody>
+          <tr><td>Short</td><td>Up to Strength x 5 ft</td><td>No modifier</td></tr>
+          <tr><td>Medium</td><td>Up to Strength x 10 ft</td><td>−1K0 to hit</td></tr>
+          <tr><td>Long</td><td>Up to Strength x 15 ft</td><td>−2K0 to hit</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="subsection-head">Ammo &amp; Reloading</h3>
+    <p>Reloading costs <strong>1 Action Die</strong> unless noted otherwise. Crossbow bolts take <strong>2 Action Dice</strong>; a box of Heavy ammunition takes <strong>4 Action Dice</strong>, and multiple characters may contribute Action Dice to assist. Clips, Energy Cells, and Boxes restore full ammo capacity. Individual rounds restore only 1 ammo capacity each.</p>
+
+    <h3 class="subsection-head">Cover</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Cover</th><th>TN Bonus</th><th>What Happens to "Under-TN" Hits</th></tr></thead>
+        <tbody>
+          <tr><td>1/4 Cover</td><td>+5</td><td>Attacks that beat the normal TN but not the modified TN hit the cover</td></tr>
+          <tr><td>1/2 Cover</td><td>+10</td><td>As above</td></tr>
+          <tr><td>3/4 Cover</td><td>+15</td><td>As above</td></tr>
+          <tr><td>Full Cover</td><td>Complete</td><td>All attacks hit the cover; cover may still be destroyed or penetrated</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Cover that is struck may be damaged or destroyed depending on its material and the weapon. The GM determines whether cover holds.</p>
+
+    <h3 class="subsection-head">Disarms</h3>
+
+    <h4 class="sub-sub-head">Melee Disarm</h4>
+    <p>Roll a contested <strong>Agility + Weapon Skill</strong> vs. the opponent's <strong>Agility + Weapon Skill</strong>. Success: the opponent loses their weapon. Success by 10 or more: choose to take the weapon. Failure: the opponent retains their weapon and gains a Free Raise on their next Melee attack.</p>
+
+    <h4 class="sub-sub-head">Ranged Disarm</h4>
+    <p>Roll <strong>Reflexes + Weapon Skill</strong> vs. the target's Ranged TN +10. Success: the opponent is disarmed and takes half the weapon's damage roll, rounded down.</p>
+  </div>
+
+  <!-- MANEUVERS -->
+  <div id="martial-arts" class="section">
+    <h2 class="section-head">Martial Arts Maneuvers</h2>
+    <p>Each rank in the Martial Arts skill grants access to one maneuver from the list below. Passive maneuvers are always active; active maneuvers require spending an Action Die or a specific trigger.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Maneuver</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>Bend Like a Reed</td><td><em>Passive.</em> +10 to Active Defense rolls when using Martial Arts as the defense skill against Melee attacks.</td></tr>
+          <tr><td>Tiger Style</td><td><em>Passive.</em> Unarmed Martial Arts damage becomes 1K2.</td></tr>
+          <tr><td>Panda Style</td><td><em>Passive.</em> Reduce all incoming Melee damage by 10 Flesh Wounds. Does not stack with armor - use the best reduction only.</td></tr>
+          <tr><td>Parkour Style</td><td><em>Passive.</em> Halve all TNs for moving through difficult terrain and negate terrain-based movement penalties (GM discretion).</td></tr>
+          <tr><td>Viper Strike</td><td>+5 to any Disarm attempt. On a failed offensive roll, the opponent does not gain a Free Raise on their next Melee attack.</td></tr>
+          <tr><td>Nunchaku Master</td><td><em>Passive.</em> When using Nunchaku, gain Extra Attack 3.</td></tr>
+          <tr><td>Bo Master</td><td>After a successful Active Defense with a Bo Staff, immediately make a free attack against the same target. Stacks with Bend Like a Reed.</td></tr>
+          <tr><td>Sweep Attack</td><td>Make a Martial Arts attack. On a hit, deal normal unarmed damage and knock the target Prone.</td></tr>
+          <tr><td>Flying Kick</td><td>Requires space to run (minimum 10 ft). Make a Martial Arts attack dealing 2K3 damage.</td></tr>
+          <tr><td>Kick-Up</td><td>Recover from the Prone condition as part of any action, with no separate Action Die required.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="section-head">Wrestling Maneuvers</h2>
+    <p>Each rank in the Wrestling skill grants access to one maneuver. The <strong>Hold</strong> is foundational - many other maneuvers require a target already in a Hold.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Maneuver</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>Hold</td><td>Roll Agility + Wrestling vs. the target's Melee TN. On success, the target may only attempt a contested Strength + Wrestling roll to escape, or use their own Wrestling maneuvers. While holding, your own actions are also limited (GM discretion).</td></tr>
+          <tr><td>Pin</td><td><em>Requires Hold.</em> Spend an Action Die and make a contested Strength + Wrestling roll. On success, the target is knocked Prone while remaining Held. Pinned targets suffer −5 to all contested Wrestling rolls.</td></tr>
+          <tr><td>Choke Hold</td><td><em>Requires Hold.</em> Spend an Action Die to deal (Str)K1 damage to the target.</td></tr>
+          <tr><td>Strengthen Hold</td><td>For each Action Die spent maintaining a Hold, gain +5 to the next contested roll to maintain it.</td></tr>
+          <tr><td>Body Slam</td><td>Contested Agility + Wrestling vs. target's Reflexes + Wrestling. On success, deal (Str)+2K2 damage and knock the target Prone.</td></tr>
+          <tr><td>Reversal</td><td><em>Requires being in a Hold.</em> Spend an Action Die; make a contested Strength + Wrestling roll with a +5 bonus. On success, the former holder is now in a Hold.</td></tr>
+          <tr><td>Conditioning</td><td><em>Passive.</em> Reduce all incoming Melee damage by 10 Flesh Wounds. Does not stack with armor - use the best reduction only.</td></tr>
+          <tr><td>Sleeper Hold</td><td><em>Requires Hold.</em> Knockout attack that escalates: 1st Action Die = (Str)K1; 2nd = (Str+1)K2; 3rd = (Str+2)K3, and so on.</td></tr>
+          <tr><td>Strength Training</td><td><em>Passive.</em> +5 to all Strength Trait rolls, including damage rolls.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SPIRIT RECOVERY -->
+  <div class="section">
+    <h2 class="section-head">Spirit Recovery</h2>
+    <p>As Current Spirit is spent, several methods allow recovery:</p>
+    <ul>
+      <li><strong>Rest:</strong> A full night's rest restores all spent Current Spirit.</li>
+      <li><strong>Meditation:</strong> Using the Meditation skill for 1 hour (TN 20) recovers 2 Current Spirit, plus 1 per 10 above the TN.</li>
+      <li><strong>GM Award:</strong> The GM may restore Spirit as a reward for good roleplay, notable actions, or meaningful story moments.</li>
+    </ul>
+    <p>The GM may also award <strong>Bonus Spirit Dice</strong> - temporary dice that cannot raise Current Spirit but can each be spent to add 1K1 to a single roll. Unused Bonus Spirit Dice at session's end convert to <strong>1 XP each</strong>.</p>
+
+    <h3 class="subsection-head">End-of-Session Spirit XP - Two Variants</h3>
+    <p>Spirit Points can reward players at the end of each session. Two approaches produce meaningfully different effects on player behavior:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Variant</th><th>Rule</th><th>Effect on Play</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Standard</strong></td>
+            <td>Unused Spirit Points at session's end convert to XP; spent points are lost.</td>
+            <td>Players tend to hoard Spirit to maximize XP, avoiding spending it even when doing so would be tactically sound.</td>
+          </tr>
+          <tr>
+            <td><strong>Full Reward</strong> <em>(recommended)</em></td>
+            <td>At session's end, players gain XP equal to their <em>total</em> Spirit Points - both used and unused. Spending Spirit carries no XP penalty.</td>
+            <td>Players spend Spirit freely, producing more dynamic and dramatic moments during play.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-label">Playtester Note</div>
+      <p>The standard rule created an unintended problem: players consistently refused to spend Spirit because they wanted the bonus XP at session's end. The Full Reward variant removes this tension entirely - players spend Spirit when it matters and still receive the full reward. Use the standard rule if you want players to be more deliberate and conservative with Spirit.</p>
+    </div>
+  </div>
+
+  <!-- CHAPTER III - WORLD INTERACTION -->
+  <div id="chapter-3" class="chapter-break">
+    <div class="chapter-number">Chapter Three</div>
+    <h1 class="chapter-title">World Interaction</h1>
+    <div class="chapter-rule"></div>
+    <p class="chapter-intro">Not every conflict is resolved through violence. This chapter covers how characters navigate society, spend money, communicate across language barriers, and contend with environmental hazards.</p>
+  </div>
+
+  <!-- STATUS EFFECTS -->
+  <div id="status-effects" class="section">
+    <h2 class="section-head">Status Effects</h2>
+    <p>The conditions below can be applied by weapons, environments, or other events. Unless noted otherwise, they last until the triggering source ends or until a successful recovery roll is made.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Status</th><th>Effect</th><th>Recovery</th></tr></thead>
+        <tbody>
+          <tr><td>Feared</td><td>Cannot make Raises of any kind.</td><td>Roll Willpower to resist at the moment it is triggered.</td></tr>
+          <tr><td>Low Light</td><td>−2 Kept dice to all rolls involving sight.</td><td>Environmental - ends when lighting improves.</td></tr>
+          <tr><td>Full Dark</td><td>−4 Kept dice to all rolls involving sight.</td><td>Environmental - ends when lighting improves.</td></tr>
+          <tr><td>Blinded</td><td>−4 Kept dice to all rolls involving sight.</td><td>As per the source of blindness.</td></tr>
+          <tr><td>Dazed</td><td>−2 Unkept dice to all actions.</td><td>Lasts 1 Round per 5 the target failed the triggering Stamina roll by.</td></tr>
+          <tr><td>Deafened</td><td>Automatically fail all hearing rolls; immune to sound-based attacks.</td><td>As per the source.</td></tr>
+          <tr><td>Paralyzed</td><td>Cannot act, but remains aware. Passive TN drops to 5 (armor still applies). An attacker may choose to deal 1 Dramatic Wound directly instead of rolling damage.</td><td>1 Round per 5 the target failed the Stamina roll by.</td></tr>
+          <tr><td>Unconscious</td><td>Cannot act or perceive surroundings. Passive TN drops to 5 (armor still applies). Attackers may choose a Death Blow instead of rolling damage.</td><td>GM-determined; typically a Willpower roll.</td></tr>
+          <tr><td>Prone</td><td>Rising costs 1 Action Die. Defense skill bonus lost. Melee TN drops to 5 (armor still applies); Ranged TN increases by 5.</td><td>Spend 1 Action Die to stand. The Kick-Up maneuver removes this cost.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Note on Sight Penalties</div>
+      <p>Full Dark and Blinded both impose a −4 Kept dice penalty. Full Dark is environmental - moving to a lit area removes it. Blinded is a condition applied to the character and persists until it runs its course.</p>
+    </div>
+  </div>
+
+  <!-- WEALTH -->
+  <div id="wealth" class="section">
+    <h2 class="section-head">Wealth</h2>
+    <p>Wealth is measured abstractly on a 1–10 scale. Each character has a <strong>Minimum Wealth</strong> and a <strong>Current Wealth</strong>. If Current Wealth falls below Minimum Wealth, it recovers by 1 per in-game month.</p>
+
+    <h3 class="subsection-head">Making Purchases</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Your Wealth vs. Item Cost</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>Your rating is <strong>higher</strong> than the item's cost</td><td>Purchase freely. GM discretion on quantity.</td></tr>
+          <tr><td>Your rating <strong>equals</strong> the item's cost</td><td>Current Wealth is reduced by 1 (as long as it won't reach zero).</td></tr>
+          <tr><td>Your rating is <strong>lower</strong> than the item's cost</td><td>Current Wealth is reduced by 1 + 1 for each Wealth level the item exceeds your rating (as long as it won't reach zero).</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="example">
+      <div class="example-label">Example</div>
+      <p>Freddy has a Current Wealth of 4 and wants to buy a Plasma Gun with a Wealth cost of 6. The gun costs 2 Wealth levels above his rating, so Current Wealth drops by 3 (1 + 2), bringing him to 1. He can afford it - barely.</p>
+    </div>
+
+    <h3 class="subsection-head">Expendable Wealth</h3>
+    <p>Expendable Wealth is temporary currency consumed on a 1-for-1 basis when purchasing items or services. It can be used regardless of Current Wealth rating and can substitute for or supplement Current Wealth when buying above rating.</p>
+
+    <div class="example">
+      <div class="example-label">Example</div>
+      <p>Freddy has Current Wealth 4 and 2 Expendable Wealth. The Plasma Gun costs 6 Wealth. Normally this would cost 3 Current Wealth, but Freddy spends 2 Expendable Wealth to offset 2 of that cost, reducing the Current Wealth drain to 1.</p>
+    </div>
+  </div>
+
+  <!-- LANGUAGES -->
+  <div id="languages" class="section">
+    <h2 class="section-head">Language Fluency</h2>
+    <p>Every language is its own skill. Rank determines fluency level:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Rank</th><th>Fluency Level</th><th>Capability</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Basic</td><td>Small phrases; can express and understand simple concepts.</td></tr>
+          <tr><td>2</td><td>Conversational</td><td>Casual spoken conversation; can read basic written text.</td></tr>
+          <tr><td>3</td><td>Proficient</td><td>Understands spoken language fully; reads and writes common usage.</td></tr>
+          <tr><td>4</td><td>Fluent</td><td>Understands slang and dialects; reads and writes at native level.</td></tr>
+          <tr><td>5</td><td>Master</td><td>Complete mastery; rolls required only for obscure or archaic usage.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The <em>Natural Linguist</em> Advantage reduces Language skill costs to <strong>1/2/4/8/16</strong>.</p>
+  </div>
+
+  <!-- SOCIAL & EXPLORATION -->
+  <div class="section">
+    <h2 class="section-head">Social Interaction</h2>
+    <p>When characters attempt to influence, deceive, intimidate, or negotiate with NPCs, the GM calls for a relevant Skill check. Common social skills include <strong>Fast Talk</strong>, <strong>Seduction</strong>, <strong>Interrogate</strong>, and <strong>Acting</strong>.</p>
+
+    <p>Social interactions are not pass/fail. A wide-margin success might produce a loyal contact, a significant price reduction, or durable information. A failure might create suspicion, hostility, or a closed door. Relevant modifiers:</p>
+
+    <ul>
+      <li>Appearance Advantages (+1 or +2 Unkept dice) apply to most social rolls.</li>
+      <li>The <em>Gregarious</em> Advantage adds +1 Kept die to all social rolls.</li>
+      <li>The <em>Famous</em> Advantage adds 1K1 to all social rolls where fame is relevant.</li>
+      <li>Attempting to deceive or intimidate may trigger an opposed roll from the target (Perception + Intuition, for example).</li>
+    </ul>
+
+    <div class="callout tip">
+      <div class="callout-label">GM Guidance</div>
+      <p>If a player describes their character's approach with detail and clear intent, consider granting a Free Raise before the dice are rolled. Social skills complement roleplay - they don't replace it.</p>
+    </div>
+
+    <h2 class="section-head" style="margin-top:2rem;">Exploration &amp; Hazards</h2>
+    <p>Outside of combat, characters frequently face environmental challenges: scaling a building, surviving a storm, navigating a burning structure. The GM sets a TN appropriate to the difficulty. Commonly involved skills:</p>
+
+    <ul>
+      <li><strong>Athletics</strong> - physical exertion, swimming, climbing, running</li>
+      <li><strong>Survival</strong> - navigating and enduring hostile environments</li>
+      <li><strong>Stealth</strong> - moving unseen and unheard</li>
+      <li><strong>Investigation</strong> - perceiving physical details in a scene</li>
+      <li><strong>Tracking</strong> - following a quarry's trail or concealing your own</li>
+    </ul>
+
+    <p>Hazards that deal damage - fire, falls, extreme cold - typically deal a fixed dice pool of Flesh Wounds and may trigger Wound Checks normally. The GM determines appropriate damage based on severity.</p>
+  </div>
+
+  <!-- CHAPTER IV - ADVANCEMENT -->
+  <div id="chapter-4" class="chapter-break">
+    <div class="chapter-number">Chapter Four</div>
+    <h1 class="chapter-title">Advancement</h1>
+    <div class="chapter-rule"></div>
+    <p class="chapter-intro">Characters grow through experience. Between sessions - or at moments of downtime the GM designates - players spend earned XP to raise Traits, improve Skills, and acquire Advantages.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-head">Earning &amp; Spending XP</h2>
+    <p>The GM awards XP at the end of sessions based on participation, roleplay, story progress, and any other criteria the table agrees on. XP expenditure outside of character creation follows the costs listed in Chapter 1.</p>
+
+    <div class="callout tip">
+      <div class="callout-label">Tip for Game Masters</div>
+      <p>A useful benchmark is <strong>3–5 XP per session</strong> for active participation, with bonuses of 1–3 XP for strong roleplay, problem-solving, or reaching a significant story milestone. Consistent awards keep advancement rewarding without outpacing the challenge curve.</p>
+    </div>
+
+    <h3 class="subsection-head">Advancement Restrictions</h3>
+    <p>Advantages marked with an asterisk (*) can only be purchased at character creation unless a specific in-game event justifies the acquisition. These represent innate or foundational qualities that cannot be trained into. Confirm with the GM before spending XP on any asterisked Advantage after creation.</p>
+  </div>
+
+  <!-- ADVANTAGES -->
+  <div id="advantages" class="section">
+    <h2 class="section-head">Advantages</h2>
+    <p>Advantages are traits and abilities that distinguish characters from one another. Advantages marked with (*) may only be purchased at character creation unless special circumstances apply. Multi-level Advantages are purchased at the desired level - lower levels need not be purchased first.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Name</th><th>Cost</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>Able Drinker</td><td>3</td><td>Drinking alcohol never affects die rolls.</td></tr>
+          <tr><td>Ally</td><td>4</td><td>An NPC who will actively assist with information, equipment, or direct help.</td></tr>
+          <tr><td>Ambidexterity *</td><td>3/6</td><td>Each level negates 1K1 of the off-hand penalty.</td></tr>
+          <tr><td>Appearance: Above Average *</td><td>2</td><td>+1 Unkept die on all social rolls. (Choose only one Appearance.)</td></tr>
+          <tr><td>Appearance: Eye Catching *</td><td>4</td><td>+2 Unkept dice on all social rolls. (Choose only one Appearance.)</td></tr>
+          <tr><td>Combat Reflexes</td><td>2/4/6</td><td>Roll 1 additional unkept die for Initiative per level purchased.</td></tr>
+          <tr><td>Contact</td><td>2</td><td>An NPC with a good relationship who may assist with information.</td></tr>
+          <tr><td>Daredevil</td><td>3/6/9</td><td>On any roll the GM qualifies as "daring," roll and keep 1 additional die per level.</td></tr>
+          <tr><td>Famous</td><td>8</td><td>Choose the reason for fame. Gain +1K1 on all social rolls where fame is relevant.</td></tr>
+          <tr><td>Fearless</td><td>5</td><td>Automatically succeed at any Fear check. May grant an ally within earshot +5 to their Fear check.</td></tr>
+          <tr><td>Gregarious</td><td>4</td><td>+1 Kept die on all social rolls.</td></tr>
+          <tr><td>Healthy Body</td><td>3</td><td>Immune to illness. +5 to resist poisons, toxins, and disease. Healers add +5 to Medicine rolls on you.</td></tr>
+          <tr><td>Indomitable Will</td><td>4</td><td>+1K1 to all Willpower rolls.</td></tr>
+          <tr><td>Jack of All Trades</td><td>8</td><td>Unskilled checks have no TN penalty and allow Raises normally.</td></tr>
+          <tr><td>Just That Good</td><td>3</td><td>Choose a skill. Always add +5 to rolls with that skill.</td></tr>
+          <tr><td>Keen Senses *</td><td>2</td><td>+1 Unkept die on any roll involving the senses.</td></tr>
+          <tr><td>Large *</td><td>4</td><td>+1 Unkept die on Melee damage. Melee weapons become Melee+ unless the target is also Large. Cannot take Small.</td></tr>
+          <tr><td>Legendary Trait *</td><td>2</td><td>One chosen Trait may be raised to 6. May be purchased twice for two different Traits.</td></tr>
+          <tr><td>Lightning Reflexes *</td><td>3</td><td>Interrupt to Active Defense costs only 1 Action Die instead of 2. +5 to Active Defense rolls in Full Defense.</td></tr>
+          <tr><td>Natural Linguist *</td><td>3</td><td>Language skill costs become 1/2/4/8/16 XP.</td></tr>
+          <tr><td>Night Trained</td><td>4</td><td>Dim light: lose only 1 Kept die. Total darkness: lose only 2. Blinded: lose only 2 Kept dice.</td></tr>
+          <tr><td>Pain Tolerance</td><td>4</td><td>No penalties from being Crippled. +5 to any roll where resisting pain is relevant.</td></tr>
+          <tr><td>Research Library</td><td>3</td><td>+10 to Research rolls while in the library. A character who studies there for 1 month gains 1 extra XP per session (once per session).</td></tr>
+          <tr><td>Safehouse</td><td>2/3/4/5</td><td>A permanent hideout (GM approves location). Each point above 2 provides 5 Expendable Wealth to outfit it.</td></tr>
+          <tr><td>Small *</td><td>4</td><td>+1 Unkept die on Stealth rolls. +2 to both Melee and Ranged TN. Cannot take Large.</td></tr>
+          <tr><td>Specialized</td><td>3</td><td>Gain one additional Skill Specialization. May be purchased multiple times.</td></tr>
+          <tr><td>Toughness</td><td>5</td><td>+1K1 to all Wound Checks.</td></tr>
+          <tr><td>Unnerving Countenance: Ugly *</td><td>4</td><td>−1 Unkept die on social rolls; +1K1 when looking threatening is useful.</td></tr>
+          <tr><td>Unnerving Countenance: Hideous *</td><td>6</td><td>−2 Unkept dice on social rolls; +2K2 when threatening. Spend 1 Spirit Die to trigger a Fear 3 effect.</td></tr>
+          <tr><td>Wealthy *</td><td>2/4/6/8/10</td><td>Each level raises Minimum Wealth by 1.</td></tr>
+          <tr><td>Worldly</td><td>8</td><td>On any Knowledge or Hobby roll for a skill you don't have, roll 1 additional unkept die as if you had Rank 1.</td></tr>
+          <tr><td>Zen State</td><td>6</td><td>Once per session, declare Zen State (can be done on any phase with an Action Die, does not consume the action). Gain 3 temporary Spirit Points, lost after 1 hour or when all 3 are spent.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout rule">
+      <div class="callout-label">Asterisked Advantages</div>
+      <p>Advantages marked with (*) represent innate qualities or formative history. They may only be purchased at character creation unless the GM rules that a specific in-world event justifies the change.</p>
+    </div>
+  </div>
+
+  <!-- SKILLS LIST -->
+  <div id="skills-list" class="section">
+    <h2 class="section-head">Skills</h2>
+    <p>Skills are listed below with their XP cost progression and a description. Skills marked with (*) have prerequisites or restrictions noted in their description. The Defense skill is especially important - its rank is added directly to both passive Melee and Ranged TN.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Skill</th><th>XP Cost (Ranks 1–5)</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Acting</td><td>1/2/4/8/16</td><td>Assuming personas, convincing others of your identity or sincerity.</td></tr>
+          <tr><td>Animal Handling</td><td>1/2/4/8/16</td><td>Caring for, calming, and working with animals.</td></tr>
+          <tr><td>Art (Choose One)</td><td>1/2/4/8/16</td><td>Mastery of a specific art form. Can be combined with Forgery for a Free Raise.</td></tr>
+          <tr><td>Athletics</td><td>1/2/4/8/16</td><td>Swimming, running, climbing, and physical sports.</td></tr>
+          <tr><td>Blacksmith</td><td>1/2/4/8/16</td><td>Use of forge and anvil to shape metal.</td></tr>
+          <tr><td>Bows</td><td>2/4/8/16/20</td><td>Using and maintaining bows and crossbows.</td></tr>
+          <tr><td>Brawling</td><td>1/2/4/6/10</td><td>Unarmed fighting - punches, kicks, headbutts.</td></tr>
+          <tr><td>Computer Operation</td><td>1/2/4/6/10</td><td>General computer use. Required prerequisite for Computer Programming.</td></tr>
+          <tr><td>Computer Programming *</td><td>3/6/12/18/24</td><td>Programming, virus creation, and hacking. Cannot exceed Computer Operation rank.</td></tr>
+          <tr><td>Dancing</td><td>1/2/4/8/16</td><td>Knowledge and performance of dances.</td></tr>
+          <tr><td>Defense</td><td>1/2/4/6/10</td><td>Adds rank directly to passive Melee and Ranged TN.</td></tr>
+          <tr><td>Demolitions</td><td>1/2/4/8/16</td><td>Arming and disarming explosives.</td></tr>
+          <tr><td>Electronics</td><td>1/2/4/8/16</td><td>Electrical and computer component work.</td></tr>
+          <tr><td>Exotic Weapons *</td><td>5/10/15/20/25</td><td>Specialized weapons outside other categories. Each exotic type is its own skill.</td></tr>
+          <tr><td>Fast Talk</td><td>1/2/4/8/16</td><td>Bluffing, bribery, small talk, and talking your way out of trouble.</td></tr>
+          <tr><td>Forensic Science</td><td>2/4/8/16/20</td><td>Forensic practices and related lab procedures.</td></tr>
+          <tr><td>Forgery</td><td>2/4/8/16/20</td><td>Replicating documents and items. The relevant applicable skill grants a Free Raise.</td></tr>
+          <tr><td>Fringe Science *</td><td>3/6/12/18/24</td><td>Science considered theoretical or beyond current understanding.</td></tr>
+          <tr><td>Gunsmith</td><td>1/2/4/8/16</td><td>Manufacturing and repairing most firearms.</td></tr>
+          <tr><td>Heavy Weapons</td><td>1/2/4/8/16</td><td>Using and maintaining heavy weapon class firearms.</td></tr>
+          <tr><td>Hobby (Choose One)</td><td>1/2/4/8/16</td><td>A skill not listed elsewhere. GM determines XP cost.</td></tr>
+          <tr><td>Instrument (Choose One)</td><td>1/2/4/8/16</td><td>Playing a specific musical instrument.</td></tr>
+          <tr><td>Interrogate</td><td>1/2/4/8/16</td><td>Extracting information through pressure, persuasion, or coercion.</td></tr>
+          <tr><td>Intuition</td><td>2/4/8/16/20</td><td>Perceiving spiritual or unseen phenomena.</td></tr>
+          <tr><td>Investigation</td><td>1/2/4/6/10</td><td>Perceiving and analyzing physical details in a scene.</td></tr>
+          <tr><td>Knowledge (Criminal)</td><td>1/2/4/8/16</td><td>Black markets, criminal organizations, and underworld contacts.</td></tr>
+          <tr><td>Knowledge (Law)</td><td>1/2/4/8/16</td><td>Law enforcement protocols, legal procedures, rights.</td></tr>
+          <tr><td>Knowledge (Magic) *</td><td>5/10/15/20/25</td><td>Hedge magic, rituals, magical lore, and arcane history.</td></tr>
+          <tr><td>Knowledge (Military)</td><td>1/2/4/8/16</td><td>Military protocols, history, procedures, and ranks.</td></tr>
+          <tr><td>Knowledge (Supernatural) *</td><td>5/10/15/20/25</td><td>Ghosts, vampires, were-creatures, fae, and related entities.</td></tr>
+          <tr><td>Language *</td><td>2/4/8/16/20</td><td>Each language is a separate skill. Rank determines fluency (see Chapter 3).</td></tr>
+          <tr><td>Life Sciences</td><td>2/4/8/16/20</td><td>Botany, biology, entomology, psychology, and related disciplines.</td></tr>
+          <tr><td>Lockpicking</td><td>1/2/4/8/16</td><td>Bypassing mechanical locks and cracking safes.</td></tr>
+          <tr><td>Martial Arts</td><td>2/4/8/16/20</td><td>Each rank grants access to one Martial Arts maneuver.</td></tr>
+          <tr><td>Mechanic</td><td>1/2/4/8/16</td><td>Repairing most mechanical machines.</td></tr>
+          <tr><td>Medicine</td><td>2/4/8/16/20</td><td>Treating injuries and diagnosing conditions. Used for First Aid and Surgery.</td></tr>
+          <tr><td>Meditation</td><td>3/6/12/18/24</td><td>Recovering Current Spirit at an accelerated rate.</td></tr>
+          <tr><td>Melee</td><td>1/2/4/8/16</td><td>Using and maintaining most melee weapons.</td></tr>
+          <tr><td>Physical Sciences</td><td>2/4/8/16/20</td><td>Physics, chemistry, and related hard sciences.</td></tr>
+          <tr><td>Pilot (Air)</td><td>2/4/8/16/20</td><td>Piloting most aircraft.</td></tr>
+          <tr><td>Pilot (Land)</td><td>1/2/4/6/10</td><td>Driving most land vehicles.</td></tr>
+          <tr><td>Pilot (Sea)</td><td>2/4/8/16/20</td><td>Piloting most naval vessels.</td></tr>
+          <tr><td>Pistols</td><td>1/2/4/8/16</td><td>Using and maintaining pistol-class firearms.</td></tr>
+          <tr><td>Religion</td><td>2/4/8/16/20</td><td>Knowledge and practices of religious traditions.</td></tr>
+          <tr><td>Research</td><td>1/2/4/8/16</td><td>Finding information on a subject efficiently.</td></tr>
+          <tr><td>Ride Animal</td><td>1/2/4/8/16</td><td>Riding most terrestrial animals.</td></tr>
+          <tr><td>Ride Exotic *</td><td>3/6/12/18/24</td><td>Riding a specific exotic creature. Must be purchased per creature.</td></tr>
+          <tr><td>Rifles</td><td>1/2/4/8/16</td><td>Using and maintaining rifle-class firearms.</td></tr>
+          <tr><td>Rituals *</td><td>3/6/12/18/24</td><td>Performing ritual magic.</td></tr>
+          <tr><td>Seduction</td><td>1/2/4/8/16</td><td>Convincing someone to become romantically interested in you.</td></tr>
+          <tr><td>Shotgun</td><td>1/2/4/8/16</td><td>Using and maintaining shotgun-class firearms.</td></tr>
+          <tr><td>Singing</td><td>1/2/4/8/16</td><td>Vocal performance.</td></tr>
+          <tr><td>Sleight of Hand</td><td>1/2/4/8/16</td><td>Palming objects, pickpocketing, minor illusion tricks.</td></tr>
+          <tr><td>SMG</td><td>1/2/4/8/16</td><td>Using and maintaining submachine gun-class firearms.</td></tr>
+          <tr><td>Stealth</td><td>1/2/4/8/16</td><td>Moving unseen, avoiding notice.</td></tr>
+          <tr><td>Survival</td><td>1/2/4/8/16</td><td>Surviving and navigating hostile environments.</td></tr>
+          <tr><td>Thrown</td><td>1/2/4/8/16</td><td>Throwing weapons and objects accurately.</td></tr>
+          <tr><td>Tracking</td><td>1/2/4/8/16</td><td>Following a quarry's trail or concealing your own.</td></tr>
+          <tr><td>Woodworking</td><td>1/2/4/8/16</td><td>Shaping and constructing with wood.</td></tr>
+          <tr><td>Wrestling</td><td>2/4/8/16/20</td><td>Each rank grants access to one Wrestling maneuver.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CHAPTER V - GM TOOLKIT -->
+  <div id="chapter-5" class="chapter-break">
+    <div class="chapter-number">Chapter Five</div>
+    <h1 class="chapter-title">Game Master Toolkit</h1>
+    <div class="chapter-rule"></div>
+    <p class="chapter-intro">This chapter is for the person running the game. It covers encounter design, NPC construction, session structure, and how to guide the story while letting players shape it.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-head">Setting Target Numbers</h2>
+    <p>The Target Number is the most powerful dial available to the GM. The following benchmarks provide guidance:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>TN</th><th>Difficulty</th><th>When to Use</th></tr></thead>
+        <tbody>
+          <tr><td>5</td><td>Trivial</td><td>Tasks requiring almost no effort for a competent person.</td></tr>
+          <tr><td>10</td><td>Easy</td><td>Routine tasks a trained person handles without stress.</td></tr>
+          <tr><td>15</td><td>Moderate</td><td>Tasks that require attention and skill. A solid default for most mid-session checks.</td></tr>
+          <tr><td>20</td><td>Challenging</td><td>Tasks that push an average skilled person noticeably.</td></tr>
+          <tr><td>25</td><td>Hard</td><td>Tasks requiring genuine expertise or exceptional effort.</td></tr>
+          <tr><td>30</td><td>Very Hard</td><td>Tasks at the edge of what an expert can reliably do.</td></tr>
+          <tr><td>35+</td><td>Legendary</td><td>Tasks that define careers.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Playtested GM Principle</div>
+      <p><strong>Default to TN 15.</strong> Determine difficulty based on the fiction, not on how skilled the characters are. Set the TN for the task and let the dice and character builds determine the outcome. This keeps the world consistent and rewards investment in skills without making everything trivially easy.</p>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-label">Rewarding Big Rolls</div>
+      <p>If a player rolls well above the TN without spending Raises, consider a small bonus - an extra piece of information, a detail that seeds a future plot point, or a moment of narrative flair. Exceptional rolls should mean something beyond a binary pass.</p>
+    </div>
+
+    <h2 class="section-head">Healing &amp; Recovery</h2>
+    <p>Outside of combat, characters need time to recover. Default healing pace:</p>
+
+    <ul>
+      <li><strong>Flesh Wounds</strong> heal fully after extended rest. A full night's sleep works, but significant downtime, a calm meal, or a few hours off their feet is usually enough.</li>
+      <li><strong>Dramatic Wounds</strong> heal at roughly <strong>1 per day</strong> with proper rest. Under a physician with adequate equipment, this may increase to <strong>2 or more per day</strong>.</li>
+    </ul>
+
+    <div class="callout">
+      <div class="callout-label">Optional - Medical Care Roll</div>
+      <p>If a character is under a physician's care, the attending character may roll <strong>Intelligence + Medicine</strong> each day. TN 15 for a decent field setup; TN 20–25 for rough conditions. A successful roll may increase healing by 1 additional Dramatic Wound that day, or grant other appropriate benefits at GM discretion.</p>
+    </div>
+
+    <h2 class="section-head">Encounter Design</h2>
+    <p>Combat is unforgiving. A single Dramatic Wound can change a fight, and Incapacitation is always one bad Wound Check away. When designing encounters:</p>
+
+    <ul>
+      <li><strong>Action economy matters most.</strong> More enemies with fewer Action Dice can overwhelm a party faster than one powerful opponent. Spread the threat.</li>
+      <li><strong>Use the environment.</strong> Cover, lighting, elevation, and chokepoints create tactical decisions without additional rules.</li>
+      <li><strong>Give enemies goals.</strong> Enemies trying to escape, capture someone, or destroy something create urgency beyond a straightforward fight.</li>
+      <li><strong>Use status effects deliberately.</strong> A Paralyzed or Prone character is an opportunity for both sides. Make sure players feel the difference.</li>
+    </ul>
+
+    <h3 class="subsection-head">NPC Design</h3>
+    <p>Most NPCs don't need a full character sheet. For minor NPCs, use the following:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>NPC Tier</th><th>Suggested Stats</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Minion</td><td>Traits 1–2, Skills 1–2, 2–4 Dramatic Wounds</td><td>Drops quickly in small groups. One or two good hits.</td></tr>
+          <tr><td>Veteran</td><td>Traits 2–3, Skills 2–4, 4–6 Dramatic Wounds</td><td>A genuine threat one-on-one. May have one or two Advantages.</td></tr>
+          <tr><td>Elite</td><td>Traits 3–4, Skills 3–5, 6–8 Dramatic Wounds</td><td>A significant combat challenge. Multiple Advantages; distinct fighting style.</td></tr>
+          <tr><td>Boss / Major NPC</td><td>Traits 3–5, Skills 4–5, Earth Ring 4–5</td><td>Full character build. Unique Advantages or abilities. Memorable tactics.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="section-head">Spirit as a Narrative Tool</h2>
+    <p>Spirit is the system's representation of a character's will, determination, and dramatic momentum - not just a mechanical resource. Award Bonus Spirit Dice at moments of high drama: a rousing speech, a hard-earned victory, a sacrifice. These moments make Spirit feel earned rather than transactional.</p>
+
+    <p>Moments where Spirit reaches its limit - a character Incapacitated, deciding whether to spend the last point to keep fighting - are the system's version of a climactic scene. Build toward them.</p>
+
+    <h2 class="section-head">Story &amp; Session Guidance</h2>
+
+    <div class="callout">
+      <div class="callout-label">First Rule</div>
+      <p><strong>Have fun.</strong> That goes double for your players. If the rules are getting in the way, circumvent them in whatever manner works for the table. The rules serve the story.</p>
+    </div>
+
+    <p>This system works best when players feel competent but not invincible. Characters with focused builds shine in their areas and struggle meaningfully in others. Design sessions that let each character's specializations matter at least once.</p>
+
+    <ul>
+      <li><strong>Prepare situations, not scripts.</strong> Decide what NPCs want and what they'll do. Player choices determine how scenes play out.</li>
+      <li><strong>Let failure drive drama.</strong> A failed Wound Check that drops someone to Crippled is not a setback - it's a scene. Play it up.</li>
+      <li><strong>Reward creativity.</strong> If a player describes something inventive, let them roll for it. The Raise system means ambition is always possible; it just carries risk.</li>
+      <li><strong>Rest and recovery are pacing tools.</strong> Controlling when players can safely recover Spirit and wounds controls the tension curve of the story.</li>
+    </ul>
+  </div>
+
+  <!-- WEAPONS & ARMOR -->
+  <div id="equipment" class="chapter-break">
+    <div class="chapter-number">Appendix A</div>
+    <h1 class="chapter-title">Weapons &amp; Armor</h1>
+    <div class="chapter-rule"></div>
+    <p class="chapter-intro">The following tables list all weapons and armor available in the system, along with their costs, statistics, and special properties.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-head">Melee Weapons</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Weapon</th><th>Cost</th><th>Skill</th><th>Damage</th><th>Range</th><th>Special</th></tr></thead>
+        <tbody>
+          <tr><td>Brass Knuckles</td><td>1</td><td>Brawling</td><td>0K2</td><td>Melee</td><td>Knockout option</td></tr>
+          <tr><td>Knife</td><td>2</td><td>Melee</td><td>1K2</td><td>Melee / Thrown</td><td>Can be thrown for Melee damage</td></tr>
+          <tr><td>Club</td><td>2</td><td>Melee</td><td>1K2</td><td>Melee</td><td>Knockout option</td></tr>
+          <tr><td>Axe / Sword</td><td>3</td><td>Melee</td><td>2K3</td><td>Melee</td><td>-</td></tr>
+          <tr><td>Throwing Axe</td><td>3</td><td>Thrown</td><td>2K2</td><td>Thrown</td><td>Melee damage type</td></tr>
+          <tr><td>Polearm</td><td>3</td><td>Melee</td><td>2K2</td><td>Melee+</td><td>Defend 5</td></tr>
+          <tr><td>Spear</td><td>2</td><td>Melee</td><td>2K2</td><td>Melee+</td><td>Can be thrown for Melee damage</td></tr>
+          <tr><td>Whip</td><td>2</td><td>Melee</td><td>2K2</td><td>Melee+</td><td>+5 to Disarm; use Melee or Ranged-style disarm</td></tr>
+          <tr><td>Stun Baton</td><td>Special</td><td>Melee</td><td>Special</td><td>Melee</td><td>Paralyze 25; Energy Cell (10)</td></tr>
+          <tr><td>Improvised Weapon</td><td>-</td><td>Special</td><td>0K1</td><td>Special</td><td>GM adjudicates all improvised cases</td></tr>
+          <tr><td>Throwing Knife</td><td>2</td><td>Thrown</td><td>1K2</td><td>Thrown</td><td>-</td></tr>
+          <tr><td>Throwing Hatchet</td><td>2</td><td>Thrown</td><td>2K2</td><td>Thrown</td><td>-</td></tr>
+          <tr><td>Nunchaku</td><td>2</td><td>Martial Arts</td><td>1K2</td><td>Melee</td><td>Extra Attack 2</td></tr>
+          <tr><td>Bo Staff</td><td>2</td><td>Martial Arts</td><td>2K2</td><td>Melee+</td><td>Defend 5</td></tr>
+          <tr><td>Shuriken</td><td>2</td><td>Martial Arts</td><td>1K1</td><td>Thrown</td><td>Extra Attack 3</td></tr>
+          <tr><td>Hand Taser</td><td>2</td><td>Melee</td><td>Special</td><td>Melee</td><td>Paralyze 20; 1 charge</td></tr>
+          <tr><td>Hidden Blade</td><td>3</td><td>Melee / Martial Arts</td><td>1K2</td><td>Melee</td><td>Free Raise if target is Surprised</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="section-head">Ranged Weapons</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Weapon</th><th>Cost</th><th>Skill</th><th>Damage</th><th>Ammo</th><th>Cap.</th><th>Range</th><th>Special</th></tr></thead>
+        <tbody>
+          <tr><td>.357 Magnum</td><td>3</td><td>Pistol</td><td>6K4</td><td>Bullet</td><td>6</td><td>40 ft</td><td>Single shot</td></tr>
+          <tr><td>.45 Pistol</td><td>3</td><td>Pistol</td><td>5K4</td><td>Clip</td><td>8</td><td>40 ft</td><td>Single shot</td></tr>
+          <tr><td>9mm Glock</td><td>2</td><td>Pistol</td><td>5K3</td><td>Clip</td><td>15</td><td>40 ft</td><td>Single shot</td></tr>
+          <tr><td>.22 Caliber</td><td>2</td><td>Pistol</td><td>3K2</td><td>Clip</td><td>8</td><td>30 ft</td><td>Single shot</td></tr>
+          <tr><td>Stun Gun</td><td>2</td><td>Pistol</td><td>Special</td><td>Clip</td><td>1</td><td>5 ft</td><td>Paralyze 20</td></tr>
+          <tr><td>Hunting Rifle</td><td>2</td><td>Rifle</td><td>5K5</td><td>Bullet</td><td>1</td><td>100 ft</td><td>Single shot</td></tr>
+          <tr><td>Sniper Rifle</td><td>5</td><td>Rifle</td><td>6K5</td><td>Bullet</td><td>6</td><td>250 ft</td><td>Single shot</td></tr>
+          <tr><td>Automatic Rifle</td><td>4</td><td>Rifle</td><td>4K3</td><td>Clip</td><td>30</td><td>60 ft</td><td>Semi or Full Auto</td></tr>
+          <tr><td>Double-Barrel Shotgun</td><td>2</td><td>Shotgun</td><td>4K4 / 8K8</td><td>Shell</td><td>2</td><td>25 ft</td><td>Both barrels: 1 Action Die</td></tr>
+          <tr><td>Sawed-Off Shotgun</td><td>2</td><td>Shotgun</td><td>3K3 / 7K7</td><td>Shell</td><td>2</td><td>20 ft</td><td>Both barrels: 1 Action Die; +5 to Conceal</td></tr>
+          <tr><td>Combat Shotgun</td><td>5</td><td>Shotgun</td><td>5K5</td><td>Shell</td><td>6</td><td>30 ft</td><td>Single shot</td></tr>
+          <tr><td>SMG</td><td>4</td><td>SMG</td><td>3K3</td><td>Clip</td><td>40</td><td>30 ft</td><td>Semi or Full Auto</td></tr>
+          <tr><td>Shrapnel Grenade</td><td>4</td><td>Thrown</td><td>5K5</td><td>-</td><td>-</td><td>Thrown</td><td>Shred 5, Radius 10</td></tr>
+          <tr><td>Thermite Grenade</td><td>4</td><td>Thrown</td><td>6K6</td><td>-</td><td>-</td><td>Thrown</td><td>Burning 15, Radius 5</td></tr>
+          <tr><td>Smoke Grenade</td><td>2</td><td>Thrown</td><td>-</td><td>-</td><td>-</td><td>Thrown</td><td>Obscure 10, Radius 5</td></tr>
+          <tr><td>Flash/Bang Grenade</td><td>2</td><td>Thrown</td><td>-</td><td>-</td><td>-</td><td>Thrown</td><td>Daze 25, Radius 5</td></tr>
+          <tr><td>Dynamite</td><td>2</td><td>Thrown</td><td>3K3</td><td>-</td><td>-</td><td>Thrown</td><td>Radius 5</td></tr>
+          <tr><td>EMP Grenade</td><td>Special</td><td>Thrown</td><td>-</td><td>-</td><td>-</td><td>Thrown</td><td>EMP 30, Radius 10</td></tr>
+          <tr><td>Magnalock Grenade</td><td>Special</td><td>Thrown</td><td>8K8</td><td>-</td><td>-</td><td>Thrown</td><td>Magnetic 25, Radius 5</td></tr>
+          <tr><td>Recurve Bow</td><td>1</td><td>Bow</td><td>Special</td><td>Arrow</td><td>1</td><td>75 ft</td><td>Power 1–3</td></tr>
+          <tr><td>Compound Bow</td><td>2</td><td>Bow</td><td>Special</td><td>Arrow</td><td>1</td><td>90 ft</td><td>Power 1–5</td></tr>
+          <tr><td>Crossbow</td><td>3</td><td>Bow</td><td>Special</td><td>Bolt</td><td>1</td><td>60 ft</td><td>-</td></tr>
+          <tr><td>Auto-Crossbow</td><td>5</td><td>Bow</td><td>Special</td><td>Bolt</td><td>6</td><td>60 ft</td><td>-</td></tr>
+          <tr><td>Arrow – Broadhead</td><td>2</td><td>-</td><td>3K3</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+          <tr><td>Arrow – Barbed</td><td>2</td><td>-</td><td>2K2</td><td>-</td><td>-</td><td>-</td><td>1K1 on removal; or First Aid TN 15</td></tr>
+          <tr><td>Arrow – Poison</td><td>2</td><td>-</td><td>2K2</td><td>-</td><td>-</td><td>-</td><td>See poison effects</td></tr>
+          <tr><td>Bolt</td><td>2</td><td>-</td><td>6K3</td><td>-</td><td>-</td><td>-</td><td>AP 5</td></tr>
+          <tr><td>RPG</td><td>7</td><td>Heavy</td><td>10K10</td><td>Rocket</td><td>1</td><td>250 ft</td><td>Shred 5, Radius 10</td></tr>
+          <tr><td>Light Machine Gun</td><td>7</td><td>Heavy</td><td>6K6</td><td>Box</td><td>150</td><td>150 ft</td><td>Full Auto only</td></tr>
+          <tr><td>Heavy Machine Gun</td><td>7</td><td>Heavy</td><td>8K8</td><td>Box</td><td>300</td><td>150 ft</td><td>Full Auto only</td></tr>
+          <tr><td>Flechette Pistol</td><td>Special</td><td>Exotic</td><td>3K3</td><td>Clip</td><td>15</td><td>10 ft</td><td>Shred 15; Armor Double; Single shot</td></tr>
+          <tr><td>Air Taser</td><td>3</td><td>Pistol</td><td>Special</td><td>Charge</td><td>1</td><td>30 ft</td><td>Paralyze 20</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="section-head">Weapon Special Properties</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Property</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>Paralyze X</td><td>On a successful hit, the target rolls Stamina vs. X. Failure: Paralyzed for 1 Round + 1 Round per 5 below the TN. This is not a Wound Check.</td></tr>
+          <tr><td>Daze X</td><td>Target rolls Stamina vs. X. Failure: Dazed for 1 Round + 1 Round per 5 below the TN. Not a Wound Check.</td></tr>
+          <tr><td>Knockout</td><td>Roll weapon damage (no bonus dice except Spirit dice). Target takes no Flesh Wounds - instead roll Stamina vs. the damage total. Failure: Unconscious for 1 Round + 1 Round per 5 below the TN.</td></tr>
+          <tr><td>Shred X</td><td>Ignore X points of Melee armor. If the target is unarmored, add X to damage instead.</td></tr>
+          <tr><td>AP X</td><td>Armor Piercing - ignore X points of Ranged armor.</td></tr>
+          <tr><td>Radius X</td><td>Full effect within X ft. 3/4 effect within Xx2. 1/2 effect within Xx3. 1/4 effect within Xx4. Use lowest-value armor worn against area damage.</td></tr>
+          <tr><td>Burning X</td><td>Target takes X Flesh Wounds on the Phase it starts burning, then on Phases 1, 5, and 10 each Round, for X Rounds total. Burning does not stack; a new Burning attack resets the duration. Armor does not reduce Burning damage unless noted.</td></tr>
+          <tr><td>Obscure X</td><td>Increases TN for any target in the affected area by X.</td></tr>
+          <tr><td>EMP X</td><td>Electronic items and creatures in range roll Stamina vs. X. Failure: shut down for 1 Round + 1 per 5 below TN. Not a Wound Check.</td></tr>
+          <tr><td>Magnetic X</td><td>Magnetically attaches to metal. Strength roll vs. X to remove.</td></tr>
+          <tr><td>Power X</td><td>Bows: add up to X dice of Strength to the damage pool.</td></tr>
+          <tr><td>Melee+</td><td>When attacking a target without a Melee+ weapon, gain a Free Raise on the attack.</td></tr>
+          <tr><td>Extra Attack X</td><td>May attack X times per Action Die spent.</td></tr>
+          <tr><td>Defend X</td><td>Add X to all Active Defense rolls when using this weapon to defend.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="section-head">Armor</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Armor</th><th>Cost</th><th>vs. Melee</th><th>vs. Ranged</th><th>Locations</th><th>Special</th></tr></thead>
+        <tbody>
+          <tr><td>Leather Trench Coat</td><td>2</td><td>−5 FW</td><td>0</td><td>Chest, Arms, Legs</td><td>-</td></tr>
+          <tr><td>Bulletproof Vest</td><td>4</td><td>−10 FW</td><td>−15 FW</td><td>Chest</td><td>-</td></tr>
+          <tr><td>Military Armor</td><td>6</td><td>−10 FW</td><td>−15 FW</td><td>Any</td><td>-</td></tr>
+          <tr><td>Riot Gear</td><td>6</td><td>−15 FW</td><td>−20 FW</td><td>Any</td><td>-</td></tr>
+          <tr><td>Riot Shield</td><td>6</td><td>*</td><td>*</td><td>Special</td><td>3/4 Cover; 50 Durability / 10 Hardness; Defend 10</td></tr>
+          <tr><td>Lined Clothing</td><td>Special</td><td>*</td><td>*</td><td>Any</td><td>Stats based on quality; concealable</td></tr>
+          <tr><td>Padded Armor</td><td>3</td><td>−4 FW</td><td>0</td><td>Any</td><td>-</td></tr>
+          <tr><td>Leather Armor</td><td>3</td><td>−7 FW</td><td>0</td><td>Any</td><td>-</td></tr>
+          <tr><td>Studded Leather</td><td>4</td><td>−10 FW</td><td>0</td><td>Any</td><td>-</td></tr>
+          <tr><td>Chainmail</td><td>4</td><td>−12 FW</td><td>−3 FW</td><td>Any</td><td>−2 to all physical actions</td></tr>
+          <tr><td>Plate Armor</td><td>5</td><td>−15 FW</td><td>−5 FW</td><td>Any</td><td>−5 to all physical actions</td></tr>
+          <tr><td>Medieval Shield</td><td>4</td><td>*</td><td>*</td><td>Special</td><td>1/2 Cover; 25 Durability / 5 Hardness; Defend 5</td></tr>
+          <tr><td>Fire-Resistant (add-on)</td><td>+1</td><td>-</td><td>-</td><td>Any</td><td>Reduces Burning damage by 5 per location</td></tr>
+          <tr><td>Fire-Proof (add-on)</td><td>+3</td><td>-</td><td>-</td><td>Any</td><td>Reduces Burning damage by 15 per location</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="section-head">Item Durability &amp; Hardness</h2>
+    <p>All items have two stats. <strong>Durability</strong> is the amount of Flesh Wounds the item can absorb before breaking - once it reaches zero, further damage passes through. <strong>Hardness</strong> functions like armor for the item, reducing incoming Flesh Wound damage by the Hardness rating before applying it to Durability.</p>
+
+    <h2 class="section-head">Weapon &amp; Armor Equipment</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Cost</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>Standard Ammunition</td><td>2</td><td>No special properties.</td></tr>
+          <tr><td>Armor-Piercing Ammo</td><td>4</td><td>Adds AP 5.</td></tr>
+          <tr><td>Armor-Piercing Ammo+</td><td>6</td><td>Adds AP 10.</td></tr>
+          <tr><td>Incendiary Ammo</td><td>4</td><td>−1K0 damage, but adds Burning 5.</td></tr>
+          <tr><td>Laser Sight</td><td>3</td><td>+5 to attack rolls when engaged.</td></tr>
+          <tr><td>Silencer</td><td>3</td><td>TN 25 to hear; reduces all range increments by 3 ft.</td></tr>
+          <tr><td>Suppressor</td><td>4</td><td>Reduces Semi-Auto and Full-Auto penalties by 5.</td></tr>
+          <tr><td>Bipod</td><td>3</td><td>+5 to hit when firing from a stationary position.</td></tr>
+          <tr><td>Concealed Holster</td><td>3</td><td>+10 to TN for detecting a concealed firearm.</td></tr>
+          <tr><td>Bandolier</td><td>3</td><td>Carry up to 30 individual rounds with easy access.</td></tr>
+          <tr><td>Combat Addon</td><td>4</td><td>Attaches to Military Armor; allows carrying extra clips or equipment.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="page-divider">// ◈ ◈ ◈ //</div>
+
+  <div style="text-align:center; padding: 2rem 0 1rem; border-top: 1px solid var(--rule-color);">
+    <div style="font-family: var(--display); font-size: 0.7rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;">Five Rings Core Rulebook</div>
+    <p style="font-style: italic; font-size: 0.85rem; color: var(--ink-muted);">First Edition &nbsp;·&nbsp; All rules subject to GM interpretation &nbsp;·&nbsp; Play boldly</p>
+  </div>
+
+</div><!-- /.page-wrap -->
+
+</body>
+</html>

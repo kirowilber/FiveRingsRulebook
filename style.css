@@ -1,0 +1,862 @@
+  :root {
+    /*  FONTS 
+       Swap any of these three values to retheme all typography at once.
+       --f-body    : running text, table cells, list items
+       --f-display : chapter titles, section headings, ring card headers
+       --f-mono    : labels, callout tags, table headers, formulas, UI */
+    --f-body:    'Source Serif 4', Georgia, serif;
+    --f-display: 'Rajdhani', sans-serif;
+    --f-mono:    'Share Tech Mono', monospace;
+ 
+    /* FONT SIZES 
+       Display scale  - headings and titles
+       Body scale     - prose, tables, callouts
+       Label scale    - small caps labels, tags, table headers*/
+    --size-xxl:  clamp(3rem, 6vw, 5rem);       /* cover h1              */
+    --size-xl:   clamp(1.8rem, 3.5vw, 2.8rem); /* chapter titles        */
+    --size-lg:   1.3rem;                      /* section heads (h2)    */
+    --size-md:   1.2rem;                         /* subsection heads (h3) */
+    --size-sm:   0.95rem;                      /* h4 / sub-sub-head     */
+    --size-body: 1rem;                         /* all body paragraphs   */
+    --size-table: 0.9rem;                     /* table cell text       */
+    --size-label: 0.70rem;                      /* mono label / tag text */
+    --size-label-sm: 0.8rem;                  /* small label variants  */
+    --size-label-xs: 0.68rem;                  /* chapter-number label  */
+ 
+    /*  LETTER SPACING */
+    --tracking-display: 0.06em;   /* chapter titles                */
+    --tracking-head:    0.08em;   /* section heads                 */
+    --tracking-sub:     0.06em;   /* subsection heads              */
+    --tracking-label:   0.3em;    /* callout labels, sidebar heads */
+    --tracking-label-wide: 0.45em; /* TOC title, chapter-number    */
+    --tracking-cover:   0.12em;   /* cover h1                      */
+    --tracking-cover-sub: 0.4em;  /* cover subtitle                */
+ 
+    /*  LINE HEIGHT */
+    --lh-prose:   1.75;   /* body paragraphs, list items  */
+    --lh-tight:   1.1;    /* cover h1                     */
+    --lh-heading: 1.1;    /* chapter title                */
+    --lh-callout: 1.7;    /* chapter intro italic text    */
+    --lh-label:   1.3;    /* flow-step labels             */
+    --lh-compact: 1.45;   /* sidebar list items           */
+    --lh-table:   1.55;   /* table cell content           */
+ 
+    /*  SPACING 
+       Controls padding, gaps, and section rhythm.
+       --sp-section : vertical gap between major content sections
+       --sp-block   : internal padding for callouts / examples
+       --sp-cell    : table cell padding
+       --sp-card    : ring card / sidebar internal padding
+       */
+    --sp-section: 3rem;    /* .section margin-bottom       */
+    --sp-chapter: 4rem;    /* .chapter-break top padding   */
+    --sp-block:   1.1rem 1.4rem; /* callout padding        */
+    --sp-cell:    0.6rem 0.9rem; /* table td padding       */
+    --sp-head-cell: 0.7rem 0.9rem; /* table th padding     */
+    --sp-card:    0.5rem 0.6rem 0.6rem; /* ring card body  */
+ 
+    /*  BORDER RADII 
+       --radius-sharp : boxes, tables, flow steps (technical feel)
+       --radius-soft  : cards, ring cards, example boxes
+       */
+    --radius-sharp: 2px;
+    --radius-soft:  4px;
+ 
+    /*  BORDER WIDTHS 
+       --bw-rule    : callout left-border accent stripe
+       --bw-rule-hr : decorative horizontal rule / chapter-rule height
+     */
+    --bw-rule:    2px;
+    --bw-rule-hr: 1px;
+ 
+    /*  COLORS - SURFACES */
+    --page:       #0f1318;
+    --page-mid:   #141920;
+    --page-dark:  #0b0e13;
+    --page-raised:#1a2130;
+ 
+    /*  COLORS - INK */
+    --ink:        #dde4ec;
+    --ink-soft:   #a8b8cc;
+    --ink-muted:  #6a7f96;
+ 
+    /*  COLORS - ACCENT */
+    --accent:      #4fc3d4;
+    --accent-dim:  #2a8a9a;
+    --accent-pale: #c8eef4;
+ 
+    /*  COLORS - SEMANTIC 
+       --red   : critical rules, wound boxes, danger callouts
+       --steel : subsection heads, tip callouts, sidebar headers
+     */
+    --red:        #c0392b;
+    --red-dim:    #8b2020;
+    --steel:      #4a6fa5;
+    --steel-dim:  #2e4a70;
+ 
+    /*  COLORS - STRUCTURAL */
+    --rule-color:   #2e4a6a;
+    --table-head:   #0d1520;
+    --table-alt:    #141b26;
+    --border:       #253545;
+    --border-bright:#3a5570;
+ 
+    /*  FONT ALIASES 
+       Legacy aliases so existing rules don't break */
+    --body:    var(--f-body);
+    --display: var(--f-display);
+    --mono:    var(--f-mono);
+  }
+ 
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+  html { font-size: 16px; scroll-behavior: smooth; }
+ 
+  body {
+    font-family: var(--f-body);
+    background: var(--page);
+    color: var(--ink);
+    line-height: var(--lh-prose);
+    font-size: var(--size-body);
+  }
+ 
+  /*  LAYOUT  */
+  .page-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+  }
+ 
+  /*  COVER  */
+.cover {
+    text-align: center;
+    padding: 6rem 2rem 5rem;
+    border-bottom: var(--bw-rule-hr) solid var(--border-bright);
+    background: var(--page-dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* SVG grid - positioned identically to the old ::before element */
+  .cover-grid {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: block;
+  }
+
+  /* Keep as ::before but only as a fallback for screen; SVG does the rest */
+  .cover::before { display: none; }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: var(--bw-rule-hr);
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+  }
+ 
+  .cover-rings {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: var(--size-label-sm);
+    letter-spacing: var(--tracking-label-wide);
+    color: var(--ink-muted);
+    font-family: var(--f-mono);
+    text-transform: uppercase;
+  }
+ 
+  .cover-rings span { opacity: 0.5; }
+  .cover-rings span.active { opacity: 1; color: var(--accent); }
+ 
+  .cover h1 {
+    font-family: var(--f-display);
+    font-size: var(--size-xxl);
+    font-weight: 700;
+    letter-spacing: var(--tracking-cover);
+    color: var(--ink);
+    line-height: var(--lh-tight);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+  }
+ 
+  .cover-subtitle {
+    font-family: var(--f-mono);
+    font-size: 0.75rem;
+    letter-spacing: var(--tracking-cover-sub);
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+ 
+  .cover-ornament {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin: 1.5rem 0;
+    opacity: 0.4;
+    font-family: var(--f-mono);
+    letter-spacing: 0.3em;
+  }
+ 
+  .cover-tagline {
+    font-style: italic;
+    font-size: var(--size-body);
+    color: var(--ink-soft);
+    max-width: 480px;
+    margin: 0 auto 3rem;
+    line-height: 1.65;
+    font-weight: 300;
+  }
+ 
+  .cover-edition {
+    font-family: var(--f-mono);
+    font-size: var(--size-label);
+    letter-spacing: var(--tracking-label);
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    border-top: var(--bw-rule-hr) solid var(--border);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
+ 
+  /*  NAV / TOC  */
+  .toc-section {
+    padding: 4rem 0 3rem;
+    border-bottom: var(--bw-rule-hr) solid var(--border);
+  }
+ 
+  .toc-title {
+    font-family: var(--f-mono);
+    font-size: 0.72rem;
+    letter-spacing: var(--tracking-label-wide);
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+ 
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem 3rem;
+  }
+ 
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+    border-bottom: var(--bw-rule-hr) solid rgba(79,195,212,0.1);
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    transition: color 0.15s;
+    font-family: var(--f-body);
+  }
+ 
+  .toc-item:hover { color: var(--accent); }
+ 
+  .toc-item-num {
+    font-family: var(--f-mono);
+    font-size: var(--size-label-xs);
+    color: var(--accent-dim);
+    flex-shrink: 0;
+    min-width: 1.8rem;
+  }
+ 
+  .toc-item-name { flex: 1; }
+ 
+  /*  CHAPTER HEADERS  */
+  .chapter-break {
+    padding: var(--sp-chapter) 0 2.5rem;
+    text-align: center;
+    border-bottom: var(--bw-rule-hr) solid var(--border);
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+ 
+  .chapter-number {
+    font-family: var(--f-mono);
+    font-size: var(--size-label-xs);
+    letter-spacing: var(--tracking-label-wide);
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    margin-bottom: 0.7rem;
+  }
+ 
+  .chapter-title {
+    font-family: var(--f-display);
+    font-size: var(--size-xl);
+    font-weight: 600;
+    color: var(--ink);
+    line-height: var(--lh-heading);
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-display);
+  }
+ 
+  .chapter-rule {
+    width: 120px;
+    height: var(--bw-rule-hr);
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    margin: 1rem auto;
+  }
+ 
+  .chapter-intro {
+    font-style: italic;
+    font-size: var(--size-body);
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: var(--lh-callout);
+    font-weight: 300;
+  }
+ 
+  /*  SECTION HEADERS  */
+  .section {
+    margin-bottom: var(--sp-section);
+  }
+ 
+  h2.section-head {
+    font-family: var(--f-display);
+    font-size: var(--size-lg);
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: var(--tracking-head);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: var(--bw-rule-hr) solid var(--border);
+    margin-top: 2rem;
+  }
+ 
+  h3.subsection-head {
+    font-family: var(--f-display);
+    font-size: var(--size-md);
+    font-weight: 600;
+    color: var(--steel);
+    letter-spacing: var(--tracking-sub);
+    text-transform: uppercase;
+    margin: 1.5rem 0 0.6rem;
+  }
+ 
+  h4.sub-sub-head {
+    font-family: var(--f-body);
+    font-size: var(--size-sm);
+    font-weight: 600;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 1.2rem 0 0.4rem;
+  }
+ 
+  /*  BODY TEXT  */
+  p {
+    margin-bottom: 0.85rem;
+    font-size: var(--size-body);
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+ 
+  p + p { margin-top: -0.2rem; }
+ 
+  strong { font-weight: 600; color: var(--ink); }
+  em { font-style: italic; color: var(--ink-soft); }
+ 
+  ul, ol {
+    margin: 0.6rem 0 1rem 1.5rem;
+    color: var(--ink-soft);
+  }
+ 
+  li { margin-bottom: 0.35rem; line-height: var(--lh-prose); font-weight: 300; }
+ 
+  /*  TABLES  */
+  .table-wrap {
+    margin: 1.2rem 0 1.8rem;
+    overflow-x: auto;
+    border: var(--bw-rule-hr) solid var(--border);
+    border-radius: var(--radius-soft);
+  }
+ 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--size-table);
+    background: var(--page-mid);
+  }
+ 
+  thead tr {
+    background: var(--table-head);
+    color: var(--accent-pale);
+    font-family: var(--f-mono);
+    font-size: var(--size-label);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+ 
+  thead th {
+    padding: var(--sp-head-cell);
+    text-align: left;
+    border-bottom: var(--bw-rule-hr) solid var(--border-bright);
+    font-weight: 400;
+  }
+ 
+  tbody tr { border-bottom: var(--bw-rule-hr) solid var(--border); }
+  tbody tr:nth-child(even) { background: var(--table-alt); }
+  tbody tr:hover { background: rgba(79,195,212,0.04); }
+ 
+  tbody td {
+    padding: var(--sp-cell);
+    vertical-align: top;
+    border-left: var(--bw-rule-hr) solid var(--border);
+    color: var(--ink-soft);
+    line-height: var(--lh-table);
+    font-weight: 300;
+  }
+ 
+  tbody td:first-child {
+    font-weight: 600;
+    color: var(--ink);
+    border-left: none;
+    font-family: var(--f-body);
+  }
+ 
+  /*  CALLOUT BOXES  */
+  .callout {
+    margin: 1.5rem 0;
+    padding: var(--sp-block);
+    border-left: var(--bw-rule) solid var(--accent-dim);
+    background: rgba(79,195,212,0.05);
+    border-radius: 0 var(--radius-soft) var(--radius-soft) 0;
+  }
+ 
+  .callout.rule {
+    border-color: var(--red);
+    background: rgba(192,57,43,0.06);
+  }
+  .callout.tip {
+    border-color: var(--steel);
+    background: rgba(74,111,165,0.07);
+  }
+ 
+  .callout-label {
+    font-family: var(--f-mono);
+    font-size: 0.67rem;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.45rem;
+  }
+  .callout.rule .callout-label { color: var(--red); }
+  .callout.tip .callout-label { color: var(--steel); }
+ 
+  .callout p { margin-bottom: 0; color: var(--ink-soft); font-size: var(--size-sm); }
+ 
+  /*  EXAMPLE BOXES  */
+  .example {
+    margin: 1.2rem 0;
+    padding: 1rem 1.3rem;
+    background: var(--page-dark);
+    border: var(--bw-rule-hr) solid var(--border);
+    border-radius: var(--radius-soft);
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+  }
+ 
+  .example-label {
+    font-family: var(--f-mono);
+    font-size: var(--size-label-sm);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 0.5rem;
+  }
+ 
+  /*  STAT BLOCKS  */
+  .stat-pill {
+    display: inline-block;
+    background: var(--table-head);
+    color: var(--accent-pale);
+    font-family: var(--f-mono);
+    font-size: var(--size-label);
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sharp);
+    border: var(--bw-rule-hr) solid var(--border);
+    margin: 0.15rem 0.2rem 0.15rem 0;
+  }
+ 
+  .formula {
+    display: inline-block;
+    font-family: var(--f-mono);
+    font-size: var(--size-table);
+    background: var(--page-dark);
+    border: var(--bw-rule-hr) solid var(--border-bright);
+    padding: 0.15rem 0.55rem;
+    border-radius: var(--radius-sharp);
+    color: var(--accent);
+  }
+ 
+  /*  RING DISPLAY  */
+  .rings-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+  }
+ 
+  .ring-card {
+    flex: 1;
+    min-width: 130px;
+    max-width: 160px;
+    text-align: center;
+    border: var(--bw-rule-hr) solid var(--border-bright);
+    border-radius: var(--radius-soft);
+    overflow: hidden;
+    background: var(--page-mid);
+  }
+ 
+  .ring-card-head {
+    background: var(--table-head);
+    color: var(--accent-pale);
+    font-family: var(--f-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: var(--tracking-sub);
+    text-transform: uppercase;
+    padding: 0.5rem 0.5rem 0.4rem;
+    border-bottom: var(--bw-rule-hr) solid var(--accent-dim);
+  }
+ 
+  .ring-card-body {
+    padding: var(--sp-card);
+    font-size: 0.79rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+ 
+  .ring-card-trait {
+    display: flex;
+    justify-content: space-between;
+    border-top: var(--bw-rule-hr) solid var(--border);
+    padding-top: 0.3rem;
+    margin-top: 0.3rem;
+    font-size: 0.77rem;
+  }
+ 
+  .ring-card-trait span:first-child { color: var(--ink-muted); font-style: italic; }
+  .ring-card-trait span:last-child { font-weight: 600; color: var(--ink); font-family: var(--f-mono); font-size: 0.73rem; }
+ 
+  /*  PAGE DIVIDER  */
+  .page-divider {
+    text-align: center;
+    margin: var(--sp-section) 0;
+    color: var(--accent-dim);
+    font-size: 0.9rem;
+    letter-spacing: 0.8em;
+    font-family: var(--f-mono);
+    opacity: 0.5;
+  }
+ 
+  .section-rule {
+    border: none;
+    border-top: var(--bw-rule-hr) solid var(--border);
+    margin: 2rem 0;
+    opacity: 0.6;
+  }
+ 
+  /*  QUICK REF SIDEBAR  */
+  .quick-ref {
+    float: right;
+    width: 220px;
+    margin: 0 0 1.5rem 1.8rem;
+    border: var(--bw-rule-hr) solid var(--border-bright);
+    border-radius: var(--radius-soft);
+    background: var(--page-dark);
+    font-size: 0.82rem;
+    overflow: hidden;
+  }
+ 
+  .quick-ref-head {
+    background: var(--steel-dim);
+    color: var(--accent-pale);
+    font-family: var(--f-mono);
+    font-size: var(--size-label-sm);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    padding: 0.45rem 0.75rem;
+  }
+ 
+  .quick-ref ul {
+    margin: 0;
+    padding: 0.6rem 0.75rem 0.6rem 1.4rem;
+    list-style: disc;
+  }
+ 
+  .quick-ref li {
+    margin-bottom: 0.25rem;
+    color: var(--ink-soft);
+    line-height: var(--lh-compact);
+    font-size: 0.81rem;
+    font-weight: 300;
+  }
+ 
+  /*  CHARACTER SHEET PREVIEW  */
+  .char-sheet-preview {
+    border: var(--bw-rule-hr) solid var(--border-bright);
+    border-radius: var(--radius-soft);
+    overflow: hidden;
+    margin: 1.5rem 0;
+    background: var(--page-mid);
+  }
+ 
+  .char-sheet-title {
+    background: var(--table-head);
+    color: var(--accent-pale);
+    font-family: var(--f-mono);
+    letter-spacing: var(--tracking-label);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    padding: 0.6rem 1rem;
+    text-align: center;
+  }
+ 
+  .char-sheet-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+  }
+ 
+  .char-sheet-cell {
+    background: var(--page-mid);
+    padding: 0.6rem 0.8rem;
+  }
+ 
+  .char-sheet-cell-label {
+    font-family: var(--f-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 0.15rem;
+  }
+ 
+  .char-sheet-cell-val {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    font-family: var(--f-display);
+  }
+ 
+  .char-sheet-cell-dots {
+    display: flex;
+    gap: 3px;
+    margin-top: 0.2rem;
+  }
+ 
+  .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    border: var(--bw-rule-hr) solid var(--accent-dim);
+    background: transparent;
+  }
+  .dot.filled { background: var(--accent-dim); }
+ 
+  /*  COMBAT FLOW DIAGRAM  */
+  .combat-flow {
+    margin: 1.5rem 0;
+    padding: 1.2rem 1rem;
+    border: var(--bw-rule-hr) solid var(--border);
+    border-radius: var(--radius-soft);
+    background: var(--page-dark);
+  }
+ 
+  .flow-steps {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+ 
+  .flow-step {
+    flex: 1;
+    min-width: 90px;
+    text-align: center;
+    position: relative;
+  }
+ 
+  .flow-step::after {
+    content: '▶';
+    position: absolute;
+    right: -8px;
+    top: 14px;
+    color: var(--accent-dim);
+    font-size: 0.6rem;
+    z-index: 1;
+  }
+  .flow-step:last-child::after { display: none; }
+ 
+  .flow-step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-sharp);
+    background: var(--table-head);
+    border: var(--bw-rule-hr) solid var(--accent-dim);
+    color: var(--accent);
+    font-family: var(--f-mono);
+    font-size: var(--size-label);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.3rem;
+  }
+ 
+  .flow-step-label {
+    font-family: var(--f-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    line-height: var(--lh-label);
+  }
+ 
+  /*  WOUND TRACK  */
+  .wound-track {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+  }
+ 
+  .wound-box {
+    width: 26px; height: 26px;
+    border: var(--bw-rule-hr) solid var(--border);
+    border-radius: var(--radius-sharp);
+    background: var(--page-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-family: var(--f-mono);
+    color: var(--ink-muted);
+  }
+ 
+  .wound-box.dramatic {
+    background: rgba(192,57,43,0.15);
+    border-color: var(--red);
+    color: var(--red);
+    font-weight: 600;
+  }
+ 
+ /*  RESPONSIVE  */
+  @media (max-width: 660px) {
+    .toc-grid { grid-template-columns: 1fr; }
+    .rings-display { gap: 0.5rem; }
+    .ring-card { min-width: 100px; }
+    .quick-ref { float: none; width: 100%; margin: 0 0 1.5rem; }
+    .char-sheet-body { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* PDF EXPORT STYLESHEET */
+  @media print {
+
+    /*  FORCE FULL COLOR OUTPUT */
+    html, body, * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      transition: none !important;
+    }
+
+    /*  ZERO PAGE MARGINS */
+    @page { size: letter portrait; margin: 0.6in 0; }
+
+    /*  BODY - BACKGROUND + SIDE GUTTERS */
+    body {
+      background: var(--page);
+      font-size: 10pt;
+      line-height: 1.6;
+      padding: 0.2in 0.8in;
+    }
+
+    /*  LAYOUT */
+    .page-wrap {
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* COVER - FULL BLEED */
+    .cover {
+      break-after: page;
+      margin: -0.2in -0.8in;
+      padding: 4rem 3rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cover-grid #grid-h line { stroke: rgba(79,195,212,0.12); }
+    .cover-grid #grid-v line { stroke: rgba(79,195,212,0.09); }
+    .cover h1      { font-size: 38pt; }
+    .cover-tagline { font-size: 10.5pt; }
+
+    /*  TABLE OF CONTENTS */
+    .toc-section {
+      break-after: page;
+      padding: 2.5rem 0 2rem;
+    }
+
+    /*  CHAPTERS - EACH STARTS A NEW PAGE */
+    .chapter-break {
+      break-before: page;
+      padding: 2.5rem 0 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .chapter-title { font-size: 24pt; }
+
+    /*  HEADINGS - THE NEVER ORPHANED PROTOCOL 
+       Keeps headings attached to the content that follows them. */
+    h2.section-head,
+    h3.subsection-head,
+    h4.sub-sub-head { break-after: avoid; }
+
+    /*  BODY TEXT */
+    p    { font-size: 9.5pt; orphans: 3; widows: 3; margin-bottom: 0.45rem; }
+    li   { font-size: 9.5pt; }
+
+    /*  TABLES 
+       Repeat headers on every page for long tables (skills, advantages, weapons and armor).
+       Small tables may stay together; 
+       large ones break naturally.
+     */
+    thead { display: table-header-group; }
+    tr    { break-inside: avoid; }
+
+    .table-wrap { margin: 0.7rem 0 1.1rem; }
+    table       { font-size: 8.5pt; }
+    thead th    { font-size: 7pt; padding: 0.4rem 0.7rem; }
+    tbody td    { font-size: 8.5pt; padding: 0.35rem 0.7rem; line-height: 1.4; }
+
+    /* KEEP BLOCKS TOGETHER */
+    .callout,
+    .example,
+    .combat-flow,
+    .rings-display,
+    .ring-card,
+    .quick-ref    { break-inside: avoid; }
+
+    /*  SUPPRESS SCREEN-ONLY BEHAVIOUR */
+    tbody tr:hover { background: transparent !important; }
+    a { text-decoration: none; }
+
+    /*  SECTIONS */
+    .section { margin-bottom: 1.5rem; }
+  }
